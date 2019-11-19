@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>个人博客-阅览室</title>
+
+    <!-- 1.引入font-awesome字体图标 -->
+    <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.css">
+    <!-- 鼠标悬停图片效果Begin -->
+    <!--icofont  css-->
+    <link rel="stylesheet" href="../css/mouse_01.css">
+    <!--page-style css-->
+    <link rel="stylesheet" href="../css/mouse_02.css">
+    <!--miktu css-->
+    <link rel="stylesheet" href="../css/mouse_03.css">
+    <!-- 鼠标悬停图片效果End -->
+    <!-- 2.引入Bootstrap 样式-->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <!-- 3.引用个人定义的welcome主页样式 -->
+    <link rel="stylesheet" href="../css/welcome.css" /> <!-- !important 优先级最高 -->
+    <!-- 4.引入所有页面的公共样式 -->
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- 5.HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 6.警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <script src="../lib/html5shiv/html5shiv.js"></script>
+    <script src="../lib/respond/respond.js"></script>
+    <style>
+        /* * { margin: 0; padding: 0; list-style: none; } */
+        /* 这里注意,样式里面不能给出。body否则会样式冲突 */
+    </style>
+</head>
+
+<body style="background: #eee" ;>
+    <div class="container">
+        <!-- 滑动显示导航 -->
+        <div class="nav2">
+            <div class="yxw_head">
+                <div class="left">
+                    <ul class="ul">
+                        <li><a class="over" href="../diary/myhome.html"><i class="glyphicon glyphicon-home"></i>&nbsp;我的主页</a></li>
+                        <li><a href="../diary/hot.html"><i class="glyphicon glyphicon-fire"></i>&nbsp;热点放送</a></li>
+                        <li><a href="../diary/album.html"><i class="fa fa-graduation-cap"></i>&nbsp;干货文章</a></li>
+                        <li><a href="../diary/waterfall.html"><i class="glyphicon glyphicon-picture"></i>&nbsp;图片墙</a></li>
+                        <li><a href="../diary/source.html"><i class="glyphicon glyphicon-book"></i>&nbsp;阅览室</a></li>
+                        <li><a href="../fullPage/fullpage.html"><i class="fa fa-cloud"></i>&nbsp;博客介绍</a></li>
+                        <li><a href="../diary/y_info.html"><i class="glyphicon glyphicon-user"></i>&nbsp;个人中心</a></li>
+                    </ul>
+                </div>
+                <div class="right pull-right yxw_log">
+                    <a class="lg-layer cursor-pointer" target="_blank" onclick="window.location ='http://localhost:88/Yxw毕业设计/diary/login.php'">登录</a>
+                    <div class="left rnavlin"></div>
+                    <a class="lg-layer" href="../diary/404.html" >注册</a>                
+                </div>
+            </div>
+        </div>
+        <!-- 头部导航 -->
+        <div class="header">
+            <div class="header">
+                <div class="header-info">
+                    <div class="header-avatar"><img src="../images/logo1.png" /></div>
+                    <div class="header-wrap">
+                        <div class="header-user h3">我的博客</div>
+                        <div class="header-opt">
+                            <span class="btn btn-danger">关注我</span>
+                            <span class="btn btn-info">&nbsp;分享&nbsp;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav form-group" style="margin-bottom: 20px;">
+                <a href="./myhome.html"><i class="glyphicon glyphicon-home"></i>&nbsp;我的主页</a>
+                <a href="./hot.html"><i class="glyphicon glyphicon-fire"></i>&nbsp;热点放送</a>
+                <a href="./album.html"><i class="fa fa-graduation-cap"></i>&nbsp;干货文章</a>
+                <a href="./waterfall.html"><i class="glyphicon glyphicon-picture"></i>&nbsp;图片墙</a>
+                <a class="curr" href="./source.html"><i class="glyphicon glyphicon-book"></i>&nbsp;阅览室</a>
+            </div>
+        </div>
+        <div class="main">
+            <!-- 软件新闻和软件公告Begin -->
+            <div class="clearfix header-main">
+                <!-- 1.右侧软件公告 -->
+                <div class="news-notice" style="float: right">
+                    <h3 class="nav-title mb10">
+                        <span class="nav-text">软件公告</span>
+                        <a href="../diary/hot.html" class="check-more has-icon pull-right" target="_blank" title="更多">
+                            MORE<span class="fa fa-chevron-circle-right"></span>
+                        </a>
+                    </h3>
+                    <ul class="news-notice-list  " id="express">
+                        <li class="item">
+                            <span class="mark" style="width:50px;">11-08</span>
+                            <i class="fa  fa-caret-right"></i>
+                            <a target="_blank" href="../details/details25.html" class="link" title="简单易用却又强大到让人惊叹的免费屏幕截图软件">Snipaste免费屏幕截图软件</a>
+                        </li>
+                        <li class="item">
+                            <i class="fa  fa-caret-right"></i>
+                            <span class="mark" style="width:50px;">11-08</span>
+                            <a target="_blank" href="../details/details26.html" class="link"
+                                title="数据恢复/硬盘分区管理软件DiskGenius V5.2.0.884 x64 专业版">数据恢复/硬盘分区管理软件</a>
+                        </li>
+                        <li class="item">
+                            <i class="fa  fa-caret-right"></i>
+                            <span class="mark" style="width:50px;">11-10</span>
+                            <a target="_blank" href="../details/details27.html" class="link"
+                                title="CCleaner Pro v5.63.7540 专业便携增强版">专业便携CCleaner增强版清理器</a>
+                        </li>
+                        <li class="item">
+                            <i class="fa  fa-caret-right"></i>
+                            <span class="mark" style="width:50px;">11-09</span>
+                            <a target="_blank" href="../details/details28.html" class="link" title="优化版Chrome谷歌浏览器(x64位/32位)">优化版Chrome谷歌浏览器</a>
+                        </li>
+                        <li class="item">
+                            <i class="fa  fa-caret-right"></i>
+                            <span class="mark" style="width:50px;">11-09</span>
+                            <a target="_blank" href="../details/details29.html" class="link" title="B站哔哩哔哩bilibili 视频解析下载工具 清晰度可选">
+                                B站哔哩哔哩bilibili 视频下载工具</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="news-area" style="margin-right: 360px;margin-left: 0; ">
+                    <h3 class="nav-title mb10">
+                        <span class="nav-text j-focus-news-tab" data-type="j-focus-news">软件新闻</span>
+                        <a href="../diary/hot.html" class="check-more has-icon" target="_blank" title="更多">
+                            MORE<span class="fa fa-chevron-circle-right"></span></a>
+                    </h3>
+                <!-- 2.左侧软件新闻 -->
+                    <div class="news-module overflow-hidden j-focus-news">
+                        <!-- 3.左侧软件轮播图片 -->
+                        <ul class="news-pic-list" id="focusNews">
+                        <li class="item" style="display: list-item;">
+                            <a class="link cursor-pointer" target="_blank" href="../details/details25.html">
+                                <img class="img-thumbnail" src="../images/push_1.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="item" style="display: none;">
+                            <a class="link cursor-pointer" target="_blank" href="../details/details26.html">
+                                <img class="img-thumbnail" src="../images/push_2.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="item" style="display: none;">
+                            <a class="link cursor-pointer" target="_blank" href="../details/details27.html">
+                                <img class="img-thumbnail" src="../images/push_3.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="item" style="display: none;">
+                            <a class="link cursor-pointer" target="_blank" href="../details/details28.html">
+                                <img class="img-thumbnail" src="../images/push_4.jpg" alt="">
+                            </a>
+                        </li>
+                        <li class="item" style="display: none;">
+                            <a class="link cursor-pointer" target="_blank" href="../details/details29.html">
+                                <img class="img-thumbnail" src="../images/push_5.jpg" alt="">
+                            </a>
+                        </li>
+                        </ul>
+                        <!-- 4.左侧软件新闻描述 -->
+                        <ul class="news-info-list">
+                        <li class="focus-btn cur">
+                            <i class="fa fa-caret-left"></i>
+                            <a class="focus-link" target="_blank" href="../details/details25.html" title="简单易用却又强大到让人惊叹的免费屏幕截图软件">
+                                <span class="focus-text">Snipaste免费屏幕截图软件</span>
+                            </a>
+                        </li>
+                        <li class="focus-btn">
+                            <i class="fa fa-caret-left"></i>
+                            <a class="focus-link" target="_blank" href="../details/details26.html"
+                                title="数据恢复/硬盘分区管理软件DiskGenius V5.2.0.884 x64 专业版 ">
+                                <span class="focus-text">数据恢复/硬盘分区管理软件</span>
+                            </a>
+                        </li>
+                        <li class="focus-btn">
+                            <i class="fa fa-caret-left"></i>
+                            <a class="focus-link" target="_blank" href="../details/details27.html" title="CCleaner Pro v5.63.7540 专业便携增强版">
+                                <span class="focus-text">专业便携CCleaner增强版清理器 </span>
+                            </a>
+                        </li>
+                        <li class="focus-btn">
+                            <i class="fa fa-caret-left"></i>
+                            <a class="focus-link" target="_blank" href="../details/details28.html" title="优化版Chrome谷歌浏览器(x64位/32位)">
+                                <span class="focus-text">优化版Chrome谷歌浏览器 </span>
+                            </a>
+                        </li>
+                        <li class="focus-btn">
+                            <i class="fa fa-caret-left"></i>
+                            <a class="focus-link" target="_blank" href="../details/details29.html" title=" B站哔哩哔哩bilibili 视频解析下载工具 清晰度可选">
+                                <span class="focus-text"> B站哔哩哔哩bilibili 视频下载工具 </span>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 软件新闻和软件公告End -->
+
+            <!-- 分类导航 -->
+            <div class="login-point mt10">
+                <ul class="lp-list">
+                    <li class="lp-item cursor-pointer">
+                        <a class="lp-link red has-icon fun-btns">
+                            <!--<span class="icon-large icon-large-student"></span>-->
+                            <span class="circle">
+                                <i class=""></i>
+                            </span>
+                            <p class="lp-text"><i class="fa fa-windows"></i> Windows软件</p>
+                        </a>
+                    </li>
+                    <li class="lp-item cursor-pointer">
+                        <a class="lp-link fun-btns green has-icon">
+                            <!--<span class="icon-large icon-large-company"></span>-->
+                            <span class="circle">
+                                <i class=""></i>
+                            </span>
+                            <p class="lp-text"><i class="fa fa-android"></i> Android软件</p>
+                        </a>
+                    </li>
+                    <li class="lp-item cursor-pointer">
+                        <a class="lp-link blue has-icon fun-btns">
+                            <!--<span class="icon-large icon-large-student"></span>-->
+                            <span class="circle">
+                                <i class=""></i>
+                            </span>
+                            <p class="lp-text"><i class="fa fa-internet-explorer"></i> Web前端</p>
+                        </a>
+                    </li>
+                    <li class="lp-item cursor-pointer">
+                        <a class="lp-link fun-btns orange has-icon">
+                            <!--<span class="icon-large icon-large-teacher"></span>-->
+                            <span class="circle">
+                                <i class=""></i>
+                            </span>
+                            <p class="lp-text"><i class="fa fa-edge"></i> Web后端</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 1、Windows软件 -->
+            <section class="news-body hover_5 miktu_hover">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="miktu_title text-center">
+                                <h1 id="active01">Windows软件</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_5 hover_area">
+                                <div class="hover_img_5 img-thumbnail cursor-pointer"><img src="../images/mouse_01.jpg"
+                                        class="img-fluid" alt="">
+                                    <div class="hover_overlay_5"></div>
+                                    <div class="hover_content_5">
+                                        <h4>Snipaste免费屏幕截图软件</h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small class="">Snipaste免费屏幕截图软件</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_5 hover_area">
+                                <div class="hover_img_5 img-thumbnail cursor-pointer"><img src="../images/mouse_02.jpg"
+                                        class="img-fluid" alt="">
+                                    <div class="hover_overlay_5"></div>
+                                    <div class="hover_content_5">
+                                        <h4>数据恢复/硬盘分区管理软件</h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small class="">DiskGeniu数据恢复管理软件</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_5 hover_area">
+                                <div class="hover_img_5 img-thumbnail cursor-pointer"><img src="../images/mouse_03.jpg"
+                                        class="img-fluid" alt="">
+                                    <div class="hover_overlay_5"></div>
+                                    <div class="hover_content_5">
+                                        <h4>专业便携CCleaner增强版清理器 </h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small class="">专业CCleaner增强版清理器</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_5 hover_area">
+                                <div class="hover_img_5 img-thumbnail cursor-pointer"><img src="../images/mouse_04.jpg"
+                                        class="img-fluid" alt="">
+                                    <div class="hover_overlay_5"></div>
+                                    <div class="hover_content_5">
+                                        <h4>优化版Chrome谷歌浏览器 </h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small class="">优化版Chrome谷歌浏览器 </small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_5 hover_area">
+                                <div class="hover_img_5 img-thumbnail cursor-pointer"><img src="../images/mouse_05.jpg"
+                                        class="img-fluid" alt="">
+                                    <div class="hover_overlay_5"></div>
+                                    <div class="hover_content_5">
+                                        <h4>B站哔哩哔哩bilibili 视频下载工具 </h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small>B站哔哩哔哩bilibili 视频下载工具 </small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_5 hover_area">
+                                <div class="hover_img_5 img-thumbnail cursor-pointer"><img src="../images/mouse_06.jpg"
+                                        class="img-fluid" alt="">
+                                    <div class="hover_overlay_5"></div>
+                                    <div class="hover_content_5">
+                                        <h4>暴风影音16周年纪念版</h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small>&nbsp;&nbsp;&nbsp;&nbsp;暴风影音16周年纪念版</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             <!-- 2、Android软件 -->
+            <section class="news-body hover_6 miktu_hover">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="miktu_title text-center">
+                                <h1>Android软件</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_6 hover_area">
+                                <div class="hover_img_6 img-thumbnail cursor-pointer"><img src="../images/mouse_07.jpg" class="img-fluid" alt="">
+                                    <div class="hover_overlay_6"></div>
+                                    <div class="hover_content_6">
+                                        <h4>XyKey是国人发明的账号密码管理器</h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small>XyKey账号密码管理器</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_6 hover_area">
+                                <div class="hover_img_6 img-thumbnail cursor-pointer"><img src="../images/mouse_08.jpg" class="img-fluid" alt="">
+                                    <div class="hover_overlay_6"></div>
+                                    <div class="hover_content_6">
+                                        <h4>一个木函集合类工具App,包含60多种工具。</h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small>一个木函集合类工具App</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_6 hover_area">
+                                <div class="hover_img_6 img-thumbnail cursor-pointer"><img src="../images/mouse_09.png" class="img-fluid" alt="">
+                                    <div class="hover_overlay_6"></div>
+                                    <div class="hover_content_6">
+                                        <h4>xposed框架可以在不修改APK文件的情况下影响程序运行(修改系统)的框架服务</h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small>xposed(修改系统)框架服务</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_6 hover_area">
+                                <div class="hover_img_6 img-thumbnail cursor-pointer"><img src="../images/mouse_10.jpg" class="img-fluid" alt="">
+                                    <div class="hover_overlay_6"></div>
+                                    <div class="hover_content_6">
+                                        <h4>酷安网是一个新兴的Android手机精品资源下载分享站</h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small>酷安网是一个安卓手机下载站</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_6 hover_area">
+                                <div class="hover_img_6 img-thumbnail cursor-pointer"><img src="../images/mouse_11.png" class="img-fluid" alt="">
+                                    <div class="hover_overlay_6"></div>
+                                    <div class="hover_content_6">
+                                        <h4>钛备份是专门为Android操作系统备份所开发的一款软件</h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small>钛备份是安卓系统备份的软件</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_6 hover_area">
+                                <div class="hover_img_6 img-thumbnail cursor-pointer"><img src="../images/mouse_12.jpg" class="img-fluid" alt="">
+                                    <div class="hover_overlay_6"></div>
+                                    <div class="hover_content_6">
+                                        <h4>SuperSU权限管理是一款针对Andriod设备Root权限管理的工具型应用。</h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small>SuperSU超级root工具应用</small>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+             <!-- 3、Web前端 -->
+             <section class="news-body hover_9 miktu_hover">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="miktu_title text-center">
+                                <h1 id="active02">Web前端</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_9 hover_area ">
+                                <div class="hover_img_9 img-thumbnail cursor-pointer"><img src="../images/mouse_13.png"
+                                        class="img-fluid" alt="">
+                                    <div class="hover_overlay_9"></div>
+                                    <div class="hover_content_9">
+                                        <h4>HTML5是Web中核心语言HTML的规范</h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small>HTML5是互联网的核心技术</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_9 hover_area">
+                                <div class="hover_img_9 img-thumbnail cursor-pointer"><img src="../images/mouse_14.jpg"
+                                        class="img-fluid" alt="">
+                                    <div class="hover_overlay_9"></div>
+                                    <div class="hover_content_9">
+                                        <h4>CSS3是CSS2(层叠样式表)升级版</h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small>CSS3为网页提供了更加丰富的界面设计</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_9 hover_area">
+                                <div class="hover_img_9 img-thumbnail cursor-pointer"><img src="../images/mouse_15.jpg"
+                                        class="img-fluid" alt="">
+                                    <div class="hover_overlay_9"></div>
+                                    <div class="hover_content_9">
+                                        <h4>JavaScript客户端脚本语言</h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small>JavaScript是一门解释型语言</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_9 hover_area">
+                                <div class="hover_img_9 img-thumbnail cursor-pointer"><img src="../images/mouse_16.png"
+                                        class="img-fluid" alt="">
+                                    <div class="hover_overlay_9"></div>
+                                    <div class="hover_content_9">
+                                        <h4>Vue是一套用于构建用户界面的渐进式JavaScript框架</h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small>Vue前端三大框架之一</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_9 hover_area">
+                                <div class="hover_img_9 img-thumbnail cursor-pointer"><img src="../images/mouse_17.png"
+                                        class="img-fluid" alt="">
+                                    <div class="hover_overlay_9"></div>
+                                    <div class="hover_content_9">
+                                        <h4>基于HTML、CSS、JavaScript 的前端开发框架</h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small>Bootstrap框架开发效率更高</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_9 hover_area">
+                                <div class="hover_img_9 img-thumbnail cursor-pointer"><img src="../images/mouse_18.png"
+                                        class="img-fluid" alt="">
+                                    <div class="hover_overlay_9"></div>
+                                    <div class="hover_content_9">
+                                        <h4>jQuery是一个快速、简洁的JavaScript框架</h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small>jQuery是一个高效的JavaScript库</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </section>
+            <!-- 4、Web后端 -->
+            <section class="news-body hover_10 miktu_hover">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="miktu_title text-center">
+                                <h1 id="active02">Web后端</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_10 hover_area">
+                                <div class="hover_img_10 img-thumbnail cursor-pointer"><img src="../images/mouse_19.png"
+                                        class="img-fluid" alt="">
+                                    <div class="hover_overlay_10"></div>
+                                    <div class="hover_content_10">
+                                        <h4>PHP是在服务器端执行的脚本语言</h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small>PHP即“超文本预处理器”</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_10 hover_area">
+                                <div class="hover_img_10 img-thumbnail cursor-pointer"><img src="../images/mouse_20.jpg"
+                                        class="img-fluid" alt="">
+                                    <div class="hover_overlay_10"></div>
+                                    <div class="hover_content_10">
+                                        <h4>MySQL是最流行的关系型数据库管理系统</h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small>MySQL是关系型数据库</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_10 hover_area">
+                                <div class="hover_img_10 img-thumbnail cursor-pointer"><img src="../images/mouse_21.jpg"
+                                        class="img-fluid" alt="">
+                                    <div class="hover_overlay_10"></div>
+                                    <div class="hover_content_10">
+                                        <h4>Apache是世界使用排名顶级的Web服务器软件 </h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small>Apache是最流行的Web服务器端软件</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_10 hover_area">
+                                <div class="hover_img_10 img-thumbnail cursor-pointer"><img src="../images/mouse_22.png"
+                                        class="img-fluid" alt="">
+                                    <div class="hover_overlay_10"></div>
+                                    <div class="hover_content_10">
+                                        <h4>Node.js是一个基于 Chrome V8 引擎的 JavaScript 运行环境。 </h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small>Node.js是在服务器端的脚本语言</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_10 hover_area">
+                                <div class="hover_img_10 img-thumbnail cursor-pointer"><img src="../images/mouse_23.png"
+                                        class="img-fluid" alt="">
+                                    <div class="hover_overlay_10"></div>
+                                    <div class="hover_content_10">
+                                        <h4>MongoDB能为WEB应用提供可扩展的高性能数据存储解决方案 </h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small style="margin-right: -10px;">MongoDB是基于分布式文件的数据库</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="hover_area_10 hover_area">
+                                <div class="hover_img_10 img-thumbnail cursor-pointer"><img src="../images/mouse_24.jpg"
+                                        class="img-fluid" alt="">
+                                    <div class="hover_overlay_10"></div>
+                                    <div class="hover_content_10">
+                                        <h4>phpMyAdmin 是一个以PHP为基础在MySQL上的数据库管理工具</h4>
+                                        <ul>
+                                            <li><a><i class="fa fa-align-left"></i></a></li>
+                                            <li><a><i class="fa fa-align-center"></i></a></li>
+                                            <li><a><i class="fa fa-align-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <small>phpMyAdmin是数据库管理工具</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- 底部区域 -->
+    <footer>
+        <!-- 点击关注我成功的按钮Start -->
+		<div class="notice-box btn-flow01" style="bottom: 0px;display: none;" aria-hidden="true">
+				<div>
+					<i class="fa fa-check-square notice-icon type-success"></i>
+					<span class="notice">关注成功</span>
+				</div>
+			</div>
+			<div class="notice-box btn-flow02" style="bottom: 0px;display: none;" aria-hidden="true">
+				<div>
+					<i class="fa fa-check-square notice-icon type-success"></i>
+					<span class="notice">分享成功</span>
+				</div>
+			</div>
+		<!-- 点击关注我成功的按钮End -->
+        <div class="branding branding-black">
+            <div class="container">
+                <h2>互动交流</h2>
+                <!-- #7cbe63 -->
+                <a target="blank" class="btn btn-lg scan-wx" href="#">微信二维码</a>
+                <a target="blank" class="btn btn-lg scan-qq" href="#">QQ二维码</a>
+                <div class="scan">
+                    <img class="img-thumbnail img-wx" src="../images3/wechat-120x120.jpg" alt="scan扫描">
+                    <!-- <div style="width: 12px;display: inline-block;"></div> -->
+                    <img class="img-thumbnail img-qq" src="../images3/qq-120x120.jpg" alt="scan扫描">
+                </div>
+            </div>
+            <div class="copy">
+                <strong class="h3" style="margin-top: 10px" ;>友情链接</strong>
+                <ul class="list-unstyled list-inline form-group" style="margin-top: 15px;">
+                    <li><a href="https://www.baidu.com/" target="_blanck" title="百度导航，做一个强大的导航">百度导航</a></li>
+                    <li><a href="https://www.coolapk.com/" target="_blanck" title="如果你是发烧机友你就来">酷安网</a></li>
+                    <li><a href="https://www.52pojie.cn/" target="_blanck" title="我爱破解网">吾爱破解网</a>
+                    </li>
+                    <li><a href="https://www.52dfg.com/" target="_blanck" title="专注于PC端破解软件研发">巅峰阁社区</a></li>
+                    <li><a href="http://www.52zxw.com/" target="_blanck" title="我要自学网，您身边的教育专家">我要自学网</a>
+                    </li>
+                    <li><a href="https://music.ghpym.com/" target="_blanck" title="全网无损音乐免费下载哦~">果核音乐搜搜</a></li>
+                    <li><a href="https://mail.163.com/" target="_blanck" title="163邮箱登录">163邮箱</a></li>
+                    <li><a href="https://www.snipaste.com/" target="_blanck" title="最强大的轻量级截图贴图工具">snipaste截图工具</a></li>
+                    <!-- <li><a href="#" target="#" title="谷歌浏览器插件解析" >Chrome插件解析</a></li> -->
+                </ul>
+                <p style="color: #999;">&copy;2017-2019
+                    <a href="#">linkedin_yan@foxmail.com</a>
+                    <a href="#">版权所有</a>
+                </p>
+                <p>站长统计</p>
+            </div>
+        </div>
+    </footer>
+    <!-- 返回顶部区域 -->
+    <div class="toolbar">
+        <a href="###" class="toolbar-item toolbar-item-weixin">
+            <span class="toolbar-layer"></span>
+        </a>
+        <a href="###" class="toolbar-item toolbar-item-feedback"></a>
+        <span class="toolbar-layer"></span>
+        </a>
+        <a href="javascript:scroll(0,0)" id="top" class="toolbar-item toolbar-item-top"></a>
+    </div>
+    <!-- <div class="layer">
+		<div class="layer-mask"></div>
+		<div class="layer-wrap">
+			<div class="layer-box">
+				<div class="layer-title">欢迎登录</div>
+				<div class="layer-close">×</div>
+				<table class="login">
+					<tr>
+						<th>用户名：</th>
+						<td><input type="text" /></td>
+					</tr>
+					<tr>
+						<th>密码：</th>
+						<td><input type="password" /></td>
+					</tr>
+					<tr>
+						<th></th>
+						<td><button class="button">登录</button></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div> -->
+    <!-- <script>
+
+		function layer() {
+			var speed = 200; //淡入淡出动画速度
+			var $layer = $(".layer");
+			var $wrap = $layer.find(".layer-wrap");
+			var $close = $layer.find(".layer-close");
+
+			//以淡入效果显示弹出层
+			$layer.fadeIn(speed);
+
+			//控制弹出层显示的位置为网页中心
+			$wrap.css("margin-left", "-" + ($wrap.width() / 2) + "px");
+			$wrap.css("margin-top", "-" + ($wrap.height() / 2) + "px");
+
+			//关闭按钮，以淡出效果隐藏弹出层
+			$close.click(function () {
+				$layer.fadeOut(speed);
+			});
+		}
+
+		//点击按钮时显示弹出层
+		$("#layer").click(layer);
+
+	</script> -->
+
+    <!-- 一般网页先加载完页面再加载JS文件,这样方便 -->
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="../js/jquery-3.3.1.js"></script>
+
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../js/bootstrap.js"></script>
+    <!-- 最后载入自己的JS代码 -->
+    <script src="../js/index.js"></script>
+    <!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
+    <!-- 引入js日历代码 -->
+    <!-- <script src="../js/calendar.js"></script> -->
+
+</body>
+
+</html>

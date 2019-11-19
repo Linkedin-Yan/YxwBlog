@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>个人博客-图片墙</title>
+<!-- 1.引入font-awesome字体图标 -->
+<link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.css">
+<!-- 2.引入Bootstrap 样式-->
+<link href="../css/bootstrap.css" rel="stylesheet">
+<!-- 3.引用个人定义的welcome主页样式 -->
+<link rel="stylesheet" href="../css/welcome.css" /> <!-- !important 优先级最高 -->
+<!-- 4.引入所有页面的公共样式 -->
+<link rel="stylesheet" href="../css/base.css">
+<!-- 4.5引入瀑布流样式文件 -->
+<link rel="stylesheet" href="../css/style.css" type="text/css" />
+<link rel="stylesheet" href="../css/lightbox.css" type="text/css" media="screen" />
+<!-- 5.HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+<!-- 6.警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+<script src="../lib/html5shiv/html5shiv.js"></script>
+<script src="../lib/respond/respond.js"></script>
+<!-- 进行瀑布流动画效果 -->
+
+</head>
+<body>
+<div class="container-fluid">
+        <nav class="row">
+            <ul class="list-inline pull-left">
+				<li style="width: 100px;""><a href="../diary/myhome.html"><i class="glyphicon glyphicon-home"></i>&nbsp;&nbsp;我的主页</a></li>
+				<li style="width: 100px;""><a href="../diary/hot.html"><i class="glyphicon glyphicon-fire"></i>&nbsp;&nbsp;热点放送</a></li>
+				<li style="width: 100px;""><a href="../diary/album.html"><i class="fa fa-graduation-cap"></i>&nbsp;&nbsp;干货文章</a></li>
+				<li style="width: 100px;""><a href="../diary/waterfall.html"><i class="glyphicon glyphicon-picture"></i>&nbsp;&nbsp;图片墙</a></li>
+				<li style="width: 100px;""><a href="../diary/source.html"><i class="glyphicon glyphicon-book"></i>&nbsp;&nbsp;阅览室</a></li>
+				<li style="width: 100px;""><a href="../fullPage/fullpage.html"><i class="fa fa-cloud"></i>&nbsp;&nbsp;博客介绍</a></li>
+				<li style="width: 100px;""><a href="../diary/y_info.html"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;个人中心</a></li>
+			</ul>
+			<span id="time" class="pull-right a"></span>
+        </nav>
+        <!-- <div class="nav2">
+			<div class="yxw_head">
+				<div class="left">
+					<ul class="ul">
+						<li style="display: inline-block;height: 100px;"><a href="../diary/myhome.html"><i class="glyphicon glyphicon-home"></i>&nbsp;我的主页</a></li>
+						<li style="display: inline-block;height: 100px;"><a href="../diary/hot.html"><i class="glyphicon glyphicon-fire"></i>&nbsp;热点放送</a></li>
+						<li style="display: inline-block;height: 100px;"><a href="../diary/album.html"><i class="fa fa-graduation-cap"></i>&nbsp;干货文章</a></li>
+						<li style="display: inline-block;height: 100px;"><a class="over"  href="../diary/waterfall.html"><i class="glyphicon glyphicon-picture"></i>&nbsp;图片墙</a></li>
+						<li style="display: inline-block;height: 100px;"><a href="../diary/source.html"><i class="glyphicon glyphicon-book"></i>&nbsp阅览室</a></li>
+						<li style="display: inline-block;height: 100px;"><a href="../fullPage/fullpage.html"><i class="fa fa-cloud"></i>&nbsp;博客介绍</a></li>
+						<li style="display: inline-block;height: 100px;"><a href="../diary/y_info.html"><i class="glyphicon glyphicon-user"></i>&nbsp;个人中心</a></li>
+					</ul>
+				</div>
+				<div class="right pull-right yxw_log">
+					<a class="lg-layer cursor-pointer" target="_self" onclick="window.location = 'http://localhost:88/Yxw毕业设计/diary/login.php'">登录</a>
+					<div class="left rnavlin"></div>
+					<a class="lg-layer cursor-pointer" href="#" onclick="alert('注册功能暂未开放')">注册</a>                
+				</div>
+			</div>
+		</div> -->
+	<div class="header">
+        <div class="header-info">
+            <div class="header-avatar"><img src="../images/logo1.png" /></div>
+            <div class="header-wrap">
+                <div class="header-user h3">我的博客</div>
+                <div class="header-opt">
+                    <span class="btn btn-danger">关注我</span>
+                    <span class="btn btn-info">&nbsp;分享&nbsp;</span>
+                </div>
+            </div>
+        </div>
+		<div class="header-nav">
+            <a href="./myhome.html"><i class="glyphicon glyphicon-home"></i>&nbsp;我的主页</a>
+            <a href="./hot.html"><i class="glyphicon glyphicon-fire"></i>&nbsp;热点放送</a>
+            <a href="./album.html"><i class="fa fa-graduation-cap"></i>&nbsp;干货文章</a>
+            <a class="curr cursor-pointer"><i class="glyphicon glyphicon-picture"></i>&nbsp;图片墙</a>
+            <a href="./source.html"><i class="glyphicon glyphicon-book"></i>&nbsp;阅览室</a>
+        </div>
+	</div>
+	<!-- <div class="water"></div> -->
+	<!-- 准备一个空div -->
+	<div id="main">
+        <ul id="waterfall">
+            <li>
+                <div class="img_block">
+                    <img src="../images2/1.jpg" />
+                    <a href="javascript:;" rel="lightbox[plants]" class="zoom">放大</a>
+                    <a href="javascript:;" class="ilike">喜欢</a>
+                </div>
+                <h3>HTML5</h3>
+                <div class="iNum"><span class="isnum_01">1</span><a class="isnum_02" href="javascript:;">2</a></div>
+                <p>HTML5是Web中核心语言HTML的规范</p>
+            </li>
+            <li>
+                <div class="img_block">
+                    <img src="../images2/2.jpg" />
+                    <a href="javascript:;" rel="lightbox[plants]" class="zoom">放大</a>
+                    <a href="javascript:;" class="ilike">喜欢</a>
+                </div>
+                <h3>CSS3</h3>
+                <div class="iNum"><span class="isnum_01">1</span><a class="isnum_02" href="javascript:;">1</a></div>
+                <p>CSS3是CSS2（层叠样式表）的升级版本</p>
+            </li>
+            <li>
+                <div class="img_block">
+                    <img src="../images2/3.jpg" />
+                    <a href="javascript:;" rel="lightbox[plants]" class="zoom">放大</a>
+                    <a href="javascript:;" class="ilike">喜欢</a>
+                </div>
+                <h3>JavaScript </h3>
+                <div class="iNum"><span class="isnum_01">1</span><a class="isnum_02" href="javascript:;">3</a></div>
+                <p>JavaScript是一门解释型语言</p>
+            </li>
+            <li>
+                <div class="img_block">
+                    <img src="../images2/4.jpg" />
+                    <a href="javascript:;" rel="lightbox[plants]" class="zoom">放大</a>
+                    <a href="javascript:;" class="ilike">喜欢</a>
+                </div>
+                <h3>PHP</h3>
+                <div class="iNum"><span class="isnum_01">1</span><a class="isnum_02" href="javascript:;">4</a></div>
+                <p>PHP是在服务器端执行的脚本语言</p>
+            </li>
+            <li>
+                <div class="img_block">
+                    <img src="../images2/5.jpg" />
+                    <a href="javascript:;" rel="lightbox[plants]" class="zoom">放大</a>
+                    <a href="javascript:;" class="ilike">喜欢</a>
+                </div>
+                <h3>SQLserver</h3>
+                <div class="iNum"><span class="isnum_01">1</span><a class="isnum_02" href="javascript:;">4</a></div>
+                <p>SQL是结构化查询语言</p>
+            </li>
+            <li>
+                <div class="img_block">
+                    <img src="../images2/6.jpg" />
+                    <a href="javascript:;" rel="lightbox[plants]" class="zoom">放大</a>
+                    <a href="javascript:;" class="ilike">喜欢</a>
+                </div>
+                <h3>MySQL</h3>
+                <div class="iNum"><span class="isnum_01">1</span><a class="isnum_02" href="javascript:;">4</a></div>
+                <p>MySQL 是最流行的关系型数据库管理系统</p>
+            </li>
+            <li>
+                <div class="img_block">
+                    <img src="../images2/7.jpg" />
+                    <a href="javascript:;" rel="lightbox[plants]" class="zoom">放大</a>
+                    <a href="javascript:;" class="ilike">喜欢</a>
+                </div>
+                <h3>烟花易冷</h3>
+                <div class="iNum"><span class="isnum_01">1</span><a class="isnum_02" href="javascript:;">4</a></div>
+                <p>周杰伦</p>
+            </li>
+            <li>
+                <div class="img_block">
+                    <img src="../images2/8.jpg" />
+                    <a href="javascript:;" rel="lightbox[plants]" class="zoom">放大</a>
+                    <a href="javascript:;" class="ilike">喜欢</a>
+                </div>
+                <h3>Camtasia Studio</h3>
+                <div class="iNum"><span class="isnum_01">6</span><a class="isnum_02" href="javascript:;">5</a></div>
+                <p>Camtasia Studio是一款最专业的屏幕录像和后期编辑的软件</p>
+            </li>
+            <li>
+                <div class="img_block">
+                    <img src="../images2/9.jpg" />
+                    <a href="javascript:;" rel="lightbox[plants]" class="zoom">放大</a>
+                    <a href="javascript:;" class="ilike">喜欢</a>
+                </div>
+                <h3>Dreamweaver</h3>
+                <div class="iNum"><span class="isnum_01">2</span><a class="isnum_02" href="javascript:;">1</a></div>
+                <p>中文名称：梦想编织者</p>
+            </li>
+            <li>
+                <div class="img_block">
+                    <img src="../images2/10.png" />
+                    <a href="javascript:;" rel="lightbox[plants]" class="zoom">放大</a>
+                    <a href="javascript:;" class="ilike">喜欢</a>
+                </div>
+                <h3>Adobe Photoshop</h3>
+                <div class="iNum"><span class="isnum_01">1</span><a class="isnum_02" href="javascript:;">4</a></div>
+                <p>简称“PS”，是由Adobe 公司开发和发行的图像处理软件</p>
+            </li>
+            <li>
+                <div class="img_block">
+                    <img src="../images2/11.png" />
+                    <a href="javascript:;" rel="lightbox[plants]" class="zoom">放大</a>
+                    <a href="javascript:;" class="ilike">喜欢</a>
+                </div>
+                <h3>Visual Studio Code</h3>
+                <div class="iNum"><span class="isnum">1</span><a class="isnum_02" href="javascript:;">4</a></div>
+                <p>为所有开发者提供一款专注于代码本身的免费的编辑器</p>
+            </li>
+            <li>
+                <div class="img_block">
+                    <img src="../images2/12.jpg" />
+                    <a href="javascript:;" rel="lightbox[plants]" class="zoom">放大</a>
+                    <a href="javascript:;" class="ilike">喜欢</a>
+                </div>
+                <h3>Less编译</h3>
+                <div class="iNum"><span class="isnum">1</span><a class="isnum_02" href="javascript:;">4</a></div>
+                <p>Less是一门css预处理语言</p>
+            </li>
+            <li>
+                <div class="img_block">
+                    <img src="../images2/13.png" />
+                    <a href="javascript:;" rel="lightbox[plants]" class="zoom">放大</a>
+                    <a href="javascript:;" class="ilike">喜欢</a>
+                </div>
+                <h3>Vue.js框架</h3>
+                <div class="iNum"><span class="isnum">1</span><a class="isnum_02" href="javascript:;">4</a></div>
+                <p>Vue是一套用于构建用户界面的渐进式JavaScript框架</p>
+            </li>
+            <li>
+                <div class="img_block">
+                    <img src="../images2/14.png" />
+                    <a href="javascript:;" rel="lightbox[plants]" class="zoom">放大</a>
+                    <a href="javascript:;" class="ilike">喜欢</a>
+                </div>
+                <h3>Node.js</h3>
+                <div class="iNum"><span class="isnum">2</span><a class="isnum_02" href="javascript:;">3</a></div>
+                <p>Node.js是一个基于 Chrome V8 引擎的 JavaScript 运行环境。</p>
+            </li>
+            <li>
+                <div class="img_block">
+                    <img src="../images2/15.png" />
+                    <a href="javascript:;" rel="lightbox[plants]" class="zoom">放大</a>
+                    <a href="javascript:;" class="ilike">喜欢</a>
+                </div>
+                <h3>Bootstrap框架</h3>
+                <div class="iNum"><span class="isnum">1</span><a class="isnum_02" href="javascript:;">4</a></div>
+                <p>基于HTML、CSS、JavaScript 开发的简洁、直观、强悍的前端开发框架，使得 Web 开发效率更高</p>
+            </li>
+
+
+        </ul>
+        <div style="visibility:hidden" id=loading class=loading><p><img src="../images2/loading.gif" /><img src="../images2/load.gif" /></p></div>
+    </div>
+    <footer>
+        <!-- 点击关注我成功的按钮Start -->
+		<div class="notice-box btn-flow01" style="bottom: 0px;display: none;" aria-hidden="true">
+				<div>
+					<i class="fa fa-check-square notice-icon type-success"></i>
+					<span class="notice">关注成功</span>
+				</div>
+			</div>
+			<div class="notice-box btn-flow02" style="bottom: 0px;display: none;" aria-hidden="true">
+				<div>
+					<i class="fa fa-check-square notice-icon type-success"></i>
+					<span class="notice">分享成功</span>
+				</div>
+			</div>
+		<!-- 点击关注我成功的按钮End -->
+    </footer>
+</div>
+<!-- 引入前面封装的插件 -->
+<!-- <script src="../js/jquery.waterfall.js"></script> -->
+<script>
+	// $(function(){
+	// 	var imgArr = createImageArr();
+	// 	//console.log(imgArr);
+	// 	$(".water").waterfall({"imgArr":imgArr}); //调用插件并传参
+	// });
+	// //创建图片列表数组
+	// function createImageArr(){
+	// 	var imgArr = [];
+	// 	for(var i=0;i<100;i++){
+	// 		imgArr[i] = "./waterfall/"+i+".jpg";
+	// 	}
+	// 	return imgArr;
+	// }
+</script>
+	<!-- 一般网页先加载完页面再加载JS文件,这样方便 -->
+	<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+	<!-- <script src="../js/jquery-3.3.1.js"></script> -->
+	<script src="../js/jquery-1.7.2.min.js"></script>
+    
+	<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+	<script src="../js/bootstrap.js"></script>
+	<!-- 最后载入自己的JS代码 -->
+	<script src="../js/index.js"></script>
+	<!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
+	<script src="../js/lightbox.js"></script>
+	<script src="../js/jquery.masonry.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".zoom,.ilike").hide();
+			$(".zoom").each(function () {
+				var src = $(this).siblings("img").attr("src");
+				$(this).attr({ href: src });
+			});
+			$("#waterfall li").mouseover(function () {
+				$(this).addClass("hover");
+				$(this).find(".zoom,.ilike").show();
+			});
+			$("#waterfall li").mouseout(function () {
+				$(this).removeClass("hover");
+				$(this).find(".zoom,.ilike").hide();
+			});
+		});
+	</script>
+	 <script>
+        $(function () {
+            var $waterfall = $('#waterfall');
+            $waterfall.masonry({
+                columnWidth: 250,
+                resizeable: true
+            });
+        });
+    </script>
+</body>
+</html>

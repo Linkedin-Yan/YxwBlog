@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人评论页</title>
+		<!-- 1.引入font-awesome字体图标 -->
+		<link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.css">
+		<!-- 2.引入Bootstrap 样式x
+		<link href="../css/bootstrap.css" rel="stylesheet"> -->
+		<!-- 3.引入字体图片和用户个人中心样式 -->
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/user.css" />
+		<!-- 4.引入评论页样式 -->
+		<!-- <link rel="stylesheet" type="text/css" href="../css/dmaku.css" /> -->
+		
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="bar">
+				<div class="w1200">
+					<span class="l"><small class="text-muted">个人评论页</small><font>用户中心</font></span>
+					<span id="time" class="a text-center" style="cursor: pointer;margin-left: 45%;"></span>
+					<span class="r"><a href="../diary/myhome.html"><i class="fa fa-arrow-left"></i>返回到首页</a></span>
+				</div>
+			</div>
+			<div class="user-info">
+				<div class="w1200">
+					<div class="user-headface">
+						<img src="../images/logo1.png"/>
+					</div>
+					<div class="user-account">
+						<p class="tip">下午好，Yxw</p>
+						<p class="account">
+							<span>帐户名：Yxw</span>
+							<span>用户名：爱带伞的小毛头</span>
+						</p>
+					</div>
+					<!-- <div class="user-modify">
+						<a href="#">修改资料></a>
+					</div> -->
+				</div>
+			</div>
+		</div>
+		<div class="main w1200">
+			<div class="left">
+				<ul>
+					<li>
+						<a href="./y_info.html">
+							<i class="fa fa-info"></i>
+							消息
+						</a>
+					</li>
+					<li>
+						<a href="./y_answer.html">
+							<i class="fa fa-comments-o"></i>
+							问答
+						</a>
+					</li>
+					<li>
+						<a href="#" class="active">
+							<i class="fa  fa-commenting"></i>
+							评论
+						</a>
+					</li>
+					<li>
+						<a href="./y_user.html">
+							<i class="fa fa-cog"></i>
+							个人资料
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="right">
+				<div class="tap">
+					<span>评论消息</span>
+				</div>
+				<div class="container">
+					<!-- <div class="no-doc">
+						<img src="../images/no_doc.jpg"/>
+						<p>您还没有消息哦~</p>
+					</div> -->
+					<div id="qq">
+						<p style="font-weight: bold;cursor: pointer;">有什么新鲜事想告诉大家?</p>
+						<div class="message" contentEditable='true' onfocus="this.placeholder=''"
+						onblur="this.placeholder='请输入内容'"></div>
+					
+						<div class="But">
+							<img src="../images/picture/bba_thumb.gif" class='bq'/>
+							<span class='submit'>发表</span>
+							<!--face begin-->
+							<div class="face">
+								<ul>
+									<li><img src="../images/picture/zz2_thumb.gif" title="[织]" ></li>
+									<li><img src="../images/picture/horse2_thumb.gif" title="神马]"></li>
+									<li><img src="../images/picture/fuyun_thumb.gif" title="[浮云]"></li>
+									<li><img src="../images/picture/geili_thumb.gif" title="[给力]"></li>
+									<li><img src="../images/picture/wg_thumb.gif" title="[围观]"></li>
+									<li><img src="../images/picture/vw_thumb.gif" title="[威武]"></li>
+									<li><img src="../images/picture/panda_thumb.gif" title="[熊猫]"></li>
+									<li><img src="../images/picture/rabbit_thumb.gif" title="兔子]"></li>
+									<li><img src="../images/picture/otm_thumb.gif" title="[奥特曼]"></li>
+									<li><img src="../images/picture/j_thumb.gif" title="[囧]"></li>
+									<li><img src="../images/picture/hufen_thumb.gif" title="[互粉]"></li>
+									<li><img src="../images/picture/liwu_thumb.gif" title="[礼物]"></li>
+									<li><img src="../images/picture/smilea_thumb.gif" title="呵呵]"></li>
+									<li><img src="../images/picture/tootha_thumb.gif" title="嘻嘻]"></li>
+									<li><img src="../images/picture/laugh.gif" title="[哈哈]"></li>
+									<li><img src="../images/picture/tza_thumb.gif" title="[可爱]"></li>
+									<li><img src="../images/picture/kl_thumb.gif" title="[可怜]"></li>
+									<li><img src="../images/picture/kbsa_thumb.gif" title="[挖鼻屎]"></li>
+									<li><img src="../images/picture/cj_thumb.gif" title="[吃惊]"></li>
+									<li><img src="../images/picture/shamea_thumb.gif" title="[害羞]"></li>
+									<li><img src="../images/picture/zy_thumb.gif" title="[挤眼]"></li>
+									<li><img src="../images/picture/bz_thumb.gif" title="[闭嘴]"></li>
+									<li><img src="../images/picture/bs2_thumb.gif" title="[鄙视]"></li>
+									<li><img src="../images/picture/lovea_thumb.gif" title="[爱你]"></li>
+									<li><img src="../images/picture/sada_thumb.gif" title="[泪]"></li>
+									<li><img src="../images/picture/heia_thumb.gif" title="[偷笑]"></li>
+									<li><img src="../images/picture/qq_thumb.gif" title="[亲亲]"></li>
+									<li><img src="../images/picture/sb_thumb.gif" title="[生病]"></li>
+									<li><img src="../images/picture/mb_thumb.gif" title="[太开心]"></li>
+									<li><img src="../images/picture/ldln_thumb.gif" title="[懒得理你]"></li>
+									<li><img src="../images/picture/yhh_thumb.gif" title="[右哼哼]"></li>
+									<li><img src="../images/picture/zhh_thumb.gif" title="[左哼哼]"></li>
+									<li><img src="../images/picture/x_thumb.gif" title="[嘘]"></li>
+									<li><img src="../images/picture/cry.gif" title="[衰]"></li>
+									<li><img src="../images/picture/wq_thumb.gif" title="[委屈]"></li>
+									<li><img src="../images/picture/t_thumb.gif" title="[吐]"></li>
+									<li><img src="../images/picture/k_thumb.gif" title="[打哈气]"></li>
+									<li><img src="../images/picture/bba_thumb.gif" title="[抱抱]"></li>
+									<li><img src="../images/picture/angrya_thumb.gif" title="[怒]"></li>
+									<li><img src="../images/picture/yw_thumb.gif" title="[疑问]"></li>
+									<li><img src="../images/picture/cza_thumb.gif" title="[馋嘴]"></li>
+									<li><img src="../images/picture/88_thumb.gif" title="[拜拜]"></li>
+									<li><img src="../images/picture/sk_thumb.gif" title="[思考]"></li>
+									<li><img src="../images/picture/sweata_thumb.gif" title="[汗]"></li>
+									<li><img src="../images/picture/sleepya_thumb.gif" title="[困]"></li>
+									<li><img src="../images/picture/sleepa_thumb.gif" title="[睡觉]"></li>
+									<li><img src="../images/picture/money_thumb.gif" title="[钱]"></li>
+									<li><img src="../images/picture/sw_thumb.gif" title="[失望]"></li>
+									<li><img src="../images/picture/cool_thumb.gif" title="[酷]"></li>
+									<li><img src="../images/picture/hsa_thumb.gif" title="[花心]"></li>
+									<li><img src="../images/picture/hatea_thumb.gif" title="[哼]"></li>
+									<li><img src="../images/picture/gza_thumb.gif" title="[鼓掌]"></li>
+									<li><img src="../images/picture/dizzya_thumb.gif" title="[晕]"></li>
+									<li><img src="../images/picture/bs_thumb.gif" title="[悲伤]"></li>
+									<li><img src="../images/picture/crazya_thumb.gif" title="[抓狂]"></li>
+									<li><img src="../images/picture/h_thumb.gif" title="[黑线]"></li>
+									<li><img src="../images/picture/yx_thumb.gif" title="[阴险]"></li>
+									<li><img src="../images/picture/nm_thumb.gif" title="[怒骂]"></li>
+									<li><img src="../images/picture/hearta_thumb.gif" title="[心]"></li>
+									<li><img src="../images/picture/unheart.gif" title="[伤心]"></li>
+									<li><img src="../images/picture/pig.gif" title="[猪头]"></li>
+									<li><img src="../images/picture/ok_thumb.gif" title="[ok]"></li>
+									<li><img src="../images/picture/ye_thumb.gif" title="[耶]"></li>
+									<li><img src="../images/picture/good_thumb.gif" title="[good]"></li>
+									<li><img src="../images/picture/no_thumb.gif" title="[不要]"></li>
+									<li><img src="../images/picture/z2_thumb.gif" title="[赞]"></li>
+									<li><img src="../images/picture/come_thumb.gif" title="[来]"></li>
+									<li><img src="../images/picture/sad_thumb.gif" title="[弱]"></li>
+									<li><img src="../images/picture/lazu_thumb.gif" title="[蜡烛]"></li>
+									<li><img src="../images/picture/clock_thumb.gif" title="[钟]"></li>
+									<li><img src="../images/picture/cake.gif" title="[蛋糕]"></li>
+									<li><img src="../images/picture/m_thumb.gif" title="[话筒]"></li>
+									<li><img src="../images/picture/weijin_thumb.gif" title="[围脖]"></li>
+									<li><img src="../images/picture/lxhzhuanfa_thumb.gif" title="[转发]"></li>
+									<li><img src="../images/picture/lxhluguo_thumb.gif" title="[路过这儿]"></li>
+									<li><img src="../images/picture/bofubianlian_thumb.gif" title="[bofu变脸]"></li>
+									<li><img src="../images/picture/gbzkun_thumb.gif" title="[gbz困]"></li>
+									<li><img src="../images/picture/boboshengmenqi_thumb.gif" title="[生闷气]"></li>
+									<li><img src="../images/picture/chn_buyaoya_thumb.gif" title="[不要啊]"></li>
+									<li><img src="../images/picture/daxiongleibenxiong_thumb.gif" title="[dx泪奔]"></li>
+									<li><img src="../images/picture/cat_yunqizhong_thumb.gif" title="[运气中]"></li>
+									<li><img src="../images/picture/youqian_thumb.gif" title="[有钱]"></li>
+									<li><img src="../images/picture/cf_thumb.gif" title="[冲锋]"></li>
+									<li><img src="../images/picture/camera_thumb.gif" title="[照相机]"></li>	
+								</ul>
+							</div>
+							<!--face end-->
+							<!--qq end-->
+							<div id="time1"></div>
+							<!--msgCon begin-->
+							<div class="msgCon">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/jquery-1.10.2.min.js"></script>
+		<script src="../js/index.js"></script>
+		<script>
+			//点击小图片，显示表情
+			$(".bq").click(function(e){
+				$(".face").slideDown();//慢慢向下展开
+				e.stopPropagation();   //阻止冒泡事件
+			});
+		
+			//在桌面任意地方点击，他是关闭
+			$(document).click(function(){
+				$(".face").slideUp();//慢慢向上收
+			});
+		
+			//点击小图标时，添加功能
+			$(".face ul li").click(function(){
+				var simg=$(this).find("img").clone();
+				$(".message").append(simg);
+			});
+		
+			//点击发表按扭，发表内容
+			$("span.submit").click(function(){
+				var txt=$(".message").html();
+				if(txt==""){
+					$('.message').focus();//自动获取焦点
+					return;
+				}
+				$(".msgCon").prepend("<div class='msgBox'><dl><dt><img src='../images/user01.jpg' width='50' height='50'/></dt><dd>Yxw</dd></dl><div class='msgTxt'>"+txt+"</div></div>");
+			});
+			//点击留言框时，添加边框线
+			$(".message").focus(function(){
+				$(this).css({"border":"1px solid #fa7d3c"});
+			})
+			$(".message").blur(function(){
+				$(this).css({"border":"1px solid #ddd"});
+			})
+		</script>
+	</body>
+</html>

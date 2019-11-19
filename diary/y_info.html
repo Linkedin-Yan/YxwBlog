@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人消息页</title>
+		<!-- 1.引入font-awesome字体图标 -->
+		<link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.css">
+		<!-- 2.引入Bootstrap 样式x
+		<link href="../css/bootstrap.css" rel="stylesheet"> -->
+		<!-- 3.引入字体图片和用户个人中心样式 -->
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/user.css" />
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="bar">
+				<div class="w1200">
+					<span class="l"><small class="text-muted">个人消息页</small><font>用户中心</font></span>
+					<span id="time" class="a text-center" style="cursor: pointer;margin-left: 45%;"></span>
+					<span class="r"><a href="../diary/myhome.html"><i class="fa fa-arrow-left"></i>返回到首页</a></span>
+				</div>
+			</div>
+			<div class="user-info">
+				<div class="w1200">
+					<div class="user-headface">
+						<img src="../images/logo1.png"/>
+					</div>
+					<div class="user-account">
+						<p class="tip">下午好，Yxw</p>
+						<p class="account">
+							<span>帐户名：Yxw</span>
+							<span>用户名：爱带伞的小毛头</span>
+						</p>
+					</div>
+					<!-- <div class="user-modify">
+						<a href="#">修改资料></a>
+					</div> -->
+				</div>
+			</div>
+		</div>
+		<div class="main w1200">
+			<div class="left">
+				<ul>
+					<li>
+						<a href="#" class="active">
+							<i class="fa fa-info"></i>
+							消息
+						</a>
+					</li>
+					<li>
+						<a href="./y_answer.html">
+							<i class="fa fa-comments-o"></i>
+							问答
+						</a>
+					</li>
+					<li>
+						<a href="./y_speak.html">
+							<i class="fa  fa-commenting"></i>
+							评论
+						</a>
+					</li>
+					<li>
+						<a href="./y_user.html">
+							<i class="fa fa-cog"></i>
+							个人资料
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="right">
+				<div class="tap">
+					<span>通知消息</span>
+				</div>
+				<div class="container">
+					<div class="no-doc">
+						<img src="../images/no_doc.jpg"/>
+						<p>您还没有消息哦~</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/jquery-3.3.1.js"></script>
+		<script src="../js/index.js"></script>
+	</body>
+</html>
