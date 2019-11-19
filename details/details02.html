@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>XMind思维导图（1.3.3）直装内购特别版Android</title>
+    <!-- 1.引入font-awesome字体图标 -->
+    <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.css">
+    <!-- 2.引入Bootstrap 样式-->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <!-- 3.引用个人定义的welcome主页样式 -->
+    <link rel="stylesheet" href="../css/welcome.css" /> <!-- !important 优先级最高 -->
+    <!-- 4.引入所有页面的公共样式 -->
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- 5.HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 6.警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <script src="../lib/html5shiv/html5shiv.js"></script>
+    <script src="../lib/respond/respond.js"></script>
+    <style>
+        /* body { background: url(../images/bg02.jpg) no-repeat fixed left top; } */
+        .bodyin { width: 1350px; }
+
+        h3[class="text-muted"]:hover { cursor: pointer; color: #428bca; font-weight: bold; }
+
+        /* 这里注意的是,行内式的优先级大于内嵌式的,如果行内式的<a>设置了颜色,那么再设置a悬浮的颜色是不生效的 */
+        /* 1.最近更新样式 */
+    </style>
+</head>
+
+<body class="" style="background: #fff;">
+    <div class="container form-group ">
+        <nav class="row">
+            <ul class="list-inline pull-left">
+                <li style="width: 100px;"><a href="../diary/myhome.html"><i class="glyphicon glyphicon-home"></i>&nbsp;&nbsp;我的主页</a></li>
+                <li style="width: 100px;"><a href="../diary/hot.html"><i class="glyphicon glyphicon-fire"></i>&nbsp;&nbsp;热点放送</a></li>
+                <li style="width: 100px;"><a href="../diary/album.html"><i class="fa fa-graduation-cap"></i>&nbsp;&nbsp;干货文章</a></li>
+                <li style="width: 100px;"><a href="../diary/waterfall.html"><i class="glyphicon glyphicon-picture"></i>&nbsp;&nbsp;图片墙</a></li>
+                <li style="width: 100px;"><a href="../diary/source.html"><i class="glyphicon glyphicon-book"></i>&nbsp;&nbsp;阅览室</a></li>
+                <li style="width: 100px;"><a href="../fullPage/fullpage.html"><i class="fa fa-cloud"></i>&nbsp;&nbsp;博客介绍</a></li>
+                <li style="width: 100px;"><a href="../diary/y_info.html"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;个人中心</a></li>
+            </ul>
+            <span id="time" class="pull-right a"></span>
+        </nav>
+         <!-- ！下拉滚动条显示导航栏 -->
+		<div class="nav2">
+            <div class="yxw_head">
+                <div class="left">
+                    <ul class="ul">
+                        <li><a href="../diary/myhome.html"><i class="glyphicon glyphicon-home"></i>&nbsp;我的主页</a></li>
+                        <li><a class="over" href="../diary/hot.html"><i class="glyphicon glyphicon-fire"></i>&nbsp;热点放送</a></li>
+                        <li><a href="../diary/album.html"><i class="fa fa-graduation-cap"></i>&nbsp;干货文章</a></li>
+                        <li><a href="../diary/waterfall.html"><i class="glyphicon glyphicon-picture"></i>&nbsp;图片墙</a></li>
+                        <li><a href="../diary/source.html"><i class="glyphicon glyphicon-book" ></i>&nbsp;阅览室</a></li>
+                        <li><a href="../fullPage/fullpage.html"><i class="fa fa-cloud"></i>&nbsp;博客介绍</a></li>
+                        <li><a href="../diary/y_info.html"><i class="glyphicon glyphicon-user"></i>&nbsp;个人中心</a></li>
+                    </ul>
+                </div>
+                <div class="right pull-right yxw_log">
+                    <a class="lg-layer cursor-pointer" target="_self" onclick="window.location = 'http://localhost:88/Yxw毕业设计/diary/login.php'">登录</a>
+                    <div class="left rnavlin"></div>
+                    <a class="lg-layer cursor-pointer" href="#" onclick="window.location='http://localhost:88/Yxw毕业设计/diary/404.html'">注册</a>            
+                </div>
+            </div>
+        </div>
+        <!-- 导航区域注释掉 -->
+        <!-- <div class="header form-group">
+            <div class="header-info">
+                <div class="header-avatar"><img src="../images/logo1.png" /></div>
+                <div class="header-wrap">
+                    <div class="header-user h3">我的博客</div>
+                    <div class="header-opt">
+                        <span class="btn ">关注我</span><span class="btn">分享</span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav">
+                <a href="../diary/myhome.html">我的主页</a><a href="./hot.html" class="curr">热点放送</a><a
+                    href="../diary/album.html">干货文章</a><a href="../diary/waterfall.html">图片墙</a>
+            </div>
+        </div> -->
+       <!-- bootstrap导航标签开始 -->
+       <div class="navbar navbar-default pull-left" role="navigation">
+            <div class="">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Yxw-个人博客热点放送页</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="menu-item-146" class="">
+                        <a href="../diary/myhome.html">
+                            <i class="glyphicon glyphicon-home"></i>&nbsp;我的主页
+                        </a>
+                    </li>
+                    <li id="menu-item-146" class="">
+                        <a href="../diary/hot.html">
+                            <i class="glyphicon glyphicon-fire"></i>&nbsp;热点放送
+                        </a>
+                    </li>
+                    <li id="menu-item-146" class="">
+                        <a href="../diary/album.html">
+                            <i class="fa fa-graduation-cap"></i>&nbsp;干货文章
+                        </a>
+                    </li>
+                    <li id="menu-item-146" class="">
+                        <a href="../diary/waterfall.html">
+                            <i class="glyphicon glyphicon-picture"></i>&nbsp;图片墙
+                        </a>
+                    </li>
+                    <li><a class="cursor-pointer" onclick="window.location = 'http://localhost:88/Yxw毕业设计/diary/login.php'"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+                    <li><a class="cursor-pointer" onclick="window.location = 'http://localhost:88/Yxw毕业设计/diary/404.html'"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="请输入搜索内容" onfocus="this.placeholder=''"  onblur="this.placeholder='请输入搜索内容'">
+                        </div>
+                        <button type="submit" class="btn btn-default">提交</button>
+                    </form>
+                </ul>
+              </div>
+        </div>
+         <!-- bootstrap导航标签结束 -->
+        <div class="current_location pull-left" style="margin-top: 0px;">
+            <div class="container">当前位置：
+                <a href="../diary/myhome.html">首页</a> <small>&gt;</small> <a
+                    href="../diary/hot.html">热点放送</a> <small>&gt;</small> 正文
+            </div>
+        </div>
+        <section class="">
+            <!-- 左边栏部分 -->
+            <div class="content-wrap">
+                <div class="content pull-left">
+                    <header class="article-header">
+                        <h1 class="article-title text-center h1">
+                            <a  class="clear_a cursor-pointer">XMind思维导图（1.3.3）直装内购特别版</a>
+                        </h1>
+                        <div class="article-meta text-center">
+                            <span class="item text-muted">2019-10-26</span>
+                            <span class="item">来源：
+                                <a class="clear_a cursor-pointer" target="_blank">XMind思维导图（1.3.3）直装内购特别版</a>
+                            </span> 
+                            <span class="item">分类：
+                                <a class="clear_a cursor-pointer">手机破解</a>/ 
+                                <a class="clear_a cursor-pointer">破解资源</a>
+                            </span>
+                            <span class="item">评论(3)</span>
+                            <span class="item"></span>
+                        </div>
+                    </header>
+                    <article class="article-content pull-left" style="width: 680px;;height: auto;">
+                        <!-- <p class="" style="margin-top: 50px;">该系统采用SSM框架，数据库采用mysql，服务器采用tomcat，系统功能请查看文章</p>
+                        <h3 class="">使用技术：SSM框架，详情如下 </h3>
+                        <ul style="list-style: disc;">
+                            <li>IOC容器：Spring</li>
+                            <li>Web框架：SpringMVC</li>
+                            <li>ORM框架：Mybatis</li>
+                            <li>安全框架：Shiro</li>
+                            <li>数据源：C3P0</li>
+                            <li>日志：log</li>
+                            <li>前端框架：Bootstrap</li>
+                        </ul> -->
+                        <h3 class="form-group">截图</h3>
+                        <figure class="img01">
+                            <img class="img-thumbnail" src="../images3/XMind-741x362.png"
+                                alt="登录" class="wp-image-01"data-tag="bdshare">
+                            <figcaption class="text-center" style="margin: 10px;">捕捉每一个灵感瞬间的App</figcaption>
+                        </figure>
+                        <p>
+                            XMind是一款让你专注思维，捕捉每一个灵感瞬间的App。每当你有一个想法，XMind帮你专注于它的扩展延伸和梳理，融合艺术与创造力，让思维清晰可见。你可以创建workflow，接下来心无旁骛投入工作流程，以灵感为中心，在无限的脑图幕布上延伸想法，随手记录点滴灵感、待办清单、会议记录或是项目规划，尽情享受逻辑思维。
+                        </p>
+                        <h2 class="h2">软件特点 </h2>
+                        <p><strong><em>1、为工作增色不少</em></strong></p>
+                        <p>白领、商务人士、互联网er 等，用于每天头脑风暴、整理思路、工作计划必备的高效率办公软件，也是跨多平台工作必备。多种多样的可能性，让你的工作方式从此大不相同。</p>
+                        <p><em><strong>2、会议速记</strong></em></p>
+                        <p>在会议的同时，将内容和想法记录成思维导图，整理成清晰美观的图表，让 PPT、Keynote 增色不少。你还可以即时导出你的工作成果到 Office / PDF 来为你的会议或报告提供便利。</p>
+                        <p><em><strong>3、个人简历</strong></em></p>
+                        <p>用二维图或时间轴的形式，更好地理清个人经历，增添自信。</p>
+                        <p><em><strong>4、协作共享</strong></em></p>
+                        <p>通过脑图让工作思路在印象笔记、有道云笔记等记事本备忘录中清晰呈现；分享 .xmind 文件至 QQ、钉钉、微信企业版，每一位同时随时通过 XMind 打开浏览想法。</p>
+                        <p><em><strong>5、让学习更添动力</strong></em></p>
+                        <p>适合在校学生和教师，整理笔记、备课、学期计划和背单词等。在做出一张漂亮的思维导图同时，也将自己的学习和备课计划整理好。在课堂上大大转变学习、授课和创造的方式。</p>
+                        <p><em><strong>6、课程笔记</strong></em></p>
+                        <p>整理学习笔记时，用思维导图更有条理地表达出来，告别杂乱无章的思绪。</p>
+                        <p><em><strong>7、灵感集合</strong></em></p>
+                        <p>无论在什么场合，都能随手记录灵感和想法，形成自己庞大的知识库，还能激励身边的朋友一起进行深度的头脑风暴。</p>
+                        <p><em><strong>8、使生活多姿多彩</strong></em></p>
+                        <p>人脑每天能产生 6000个念头，而其中 95% 是杂念。一念三千，抓住最重要的思绪，提高思考的效率，正是思维导图的一个重要作用。</p>
+                        <p><em><strong>9、旅行规划</strong></em></p>
+                        <p>在行程前，做好每日规划。在旅途中，记录旅游的点滴。</p>
+                        <p><em><strong>10、年度计划</strong></em></p>
+                        <p>除了每日计划，每周每月甚至年度计划，都可以在一张思维导图中清晰地呈现。</p>
+                        <p><em><strong>11、无处不在的思维导图</strong></em></p>
+                        <p>XMind，为所有努力工作、学习的人而设。你思考的方式，将会因 XMind 而改变。</p>
+                        <p><em><strong>12、思维导图介绍</strong></em></p>
+                        <p>思维导图，又称脑图、心智图，是一种图像式思维的工具以及一种利用图像式思考辅助工具来表达思维的工具。在思维导图的基础概念下，它可以利用不同的方式去表现人们的想法，不局限于格式，样式与概念。</p>
+                        <h2> **<strong>官方更新</strong> </h2>
+                        <p>* bug修复和稳定性提升</p>
+                        <p>* 支持Wi-Fi传输</p>
+                        <p>* 支持从本地导入.xmind文件</p>
+                        <p>* 增加新功能：添加备注、超链接、标签</p>
+                        <p>* 修复部分机型上无法生成缩略图的问题</p>
+                        <p>* 修复部分机型上无法分享PNG的问题</p>
+                        <p>* 修复其它Bug并提升稳定性<br></p>
+                        <div class="article-nav">
+                                <span class="article-nav-prev">上一篇<br><a href="./details01.html" class="a_blue" rel="prev">基于SSM的在线学习平台</a></span>
+                                <span class="article-nav-next">下一篇<br><a href="./details03.html" class="a_blue" rel="next">会声会影2019一键安装破解版</a></span>
+                        </div>
+                        <!-- <figure class="img01">
+                                <img class="img-thumbnail" src="../images3/数据库结构-741x362.png"
+                                    alt="数据库结构" class="wp-image-01"data-tag="bdshare">
+                                <figcaption class="text-center">数据库结构</figcaption>
+                        </figure> -->
+                        <!-- 赞和打赏区域 -->
+                        <div class="post-actions" style="margin-top: 0px;">
+                            <a href="javascript:;" class="post-like action action-like" ><i class="fa fa-thumbs-o-up"></i>赞(<span>1</span>)</a>
+                            <a href="javascript:;" class="action action-rewards" data-event="rewards"><i class="fa fa-jpy"></i> 打赏</a>
+                        </div>
+                        <!-- 未经允许不得转载 -->
+                        <div class="post-copyright">未经允许不得转载：
+                            <a href="#">爱带伞的小毛头</a> »
+                            <a href="#">XMind思维导图（1.3.3）直装内购特别版</a>
+                        </div>
+                    </article>
+                    <!-- XMind思维导图（1.3.3）直装内购特别版 -->
+                    <!-- 741x362.png -->
+                </div>
+            </div>
+            <!-- 右边侧边栏 -->
+            <div class="sidebar">
+                <!-- 关于我们，个人博客-热点放送页 -->
+                <div class="sild01 pull-left cursor-pointer" style="height: 168px;margin-top: 28px;">
+                    <a class="style01">
+                        <strong>关于我们</strong>
+                        <h2 class="a" style="color: #428bca;">Yxw-个人博客热点放送页</h2>
+                        <p>网页持续开发中ing....</p>
+                    </a>
+                </div>
+                <!-- 天气预报一栏 -->
+                <div class="weather cursor-pointer pull-left">
+                    <iframe width="399" scrolling="no" height="72" frameborder="0" allowtransparency="true" src="//i.tianqi.com/index.php?c=code&id=2&bdc=%23&icon=1&num=2&site=12">
+                    </iframe>
+                </div>
+                <!-- 网站公告-会员中心 -->
+                <div class="sild01 pull-left cursor-pointer notice" style="height: 176px;">
+                    <!-- 导航栏标题 pills表示胶囊式导航菜单 -->
+                    <ul class="nav nav-pills">
+                        <li class="active text-danger"><a data-toggle="tab" href="#home">网站公告</a></li>
+                        <li><a data-toggle="tab" href="#menu1">会员中心</a></li>
+                    </ul>
+                    <!-- 导航里的内容  -->
+                    <div class="tab-content">
+                        <!-- 导航里第一页的内容 -->
+                        <div id="home" class="tab-pane fade in active">
+                            <div class="item item-01">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <time class="" >11-01</time> <a class="a" href="#" style="font-weight: bold;font-family: '黑体';">必读||欢迎来到我的网站</a>
+                                    </li>
+                                    <li>
+                                        <time class="" ></time>10-26</time><a class="a" href="../details/details02.html"> 必用||XMind思维导图直装内购特别版Android </a>
+                                    </li>
+                                    <li>
+                                        <time class="" ></time>10-26</time><a class="a" href="../details/details03.html"> 必用||会声会影2019一键安装破解版</a>
+                                    </li>
+                                    <li>
+                                        <time class="" ></time>10-25</time><a class="a" href="../details/details04.html"> 必用||MusicTools无损付费音乐免费下载工具</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 导航里第二页的内容 -->
+                        <div id="menu1" class="tab-pane fade">
+                            <div class="item item-02">
+                                <h4 class="h4">需要登录才能进入会员中心</h4>
+                                <p>
+                                    <a href="#" onclick="window.location = 'http://localhost:88/Yxw毕业设计/diary/login.php'" class="btn btn-info signin-loader">立即登录</a>
+                                    <a href="#" onclick="window.location='http://localhost:88/Yxw毕业设计/diary/404.html'" class="btn btn-default signup-loader">现在注册</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 网站公告 会员中心 end -->
+
+                <!-- 最新公告 -->
+                <div class="sild01 sild02 pull-left cursor-pointer" style="margin-top: 0px;">
+                    <a href="#">
+                        <strong>最新通知</strong>
+                        <h2>最新公告</h2>
+                        <p>欢迎来到本网站,所有最新发布的热点都可在本网站中浏览。</p>
+                    </a>
+                </div>
+                <!-- 全站下载须知 -->
+                <div class="sild01 sild02 pull-left cursor-pointer" style="top: 0px;">
+                    <a href="#">
+                        <strong>用户必看</strong>
+                        <h2>全站下载须知</h2>
+                        <p>
+                            如果有问题，欢迎咨询我们，最简单的方式是点击电脑屏幕右下方微信标志快速与我建立会话，扫描二维码以后与我取得联系。
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- 底部区域 -->
+    <footer>
+        <div class="branding branding-black">
+            <div class="container">
+                <h2>互动交流</h2>
+                <!-- #7cbe63 -->
+                <a target="blank" class="btn btn-lg scan-wx" href="#">微信二维码</a>
+                <a target="blank" class="btn btn-lg scan-qq" href="#">QQ二维码</a>
+                <div class="scan">
+                    <img class="img-thumbnail img-wx" src="../images3/wechat-120x120.jpg" alt="scan扫描">
+                    <!-- <div style="width: 12px;display: inline-block;"></div> -->
+                    <img class="img-thumbnail img-qq" src="../images3/qq-120x120.jpg" alt="scan扫描">
+                </div>
+            </div>
+            <div class="copy">
+                <strong class="h3" style="margin-top: 10px" ;>友情链接</strong>
+                <ul class="list-unstyled list-inline form-group" style="margin-top: 15px;">
+                    <li><a href="https://www.baidu.com/" target="_blank" title="百度导航，做一个强大的导航">百度导航</a></li>
+                    <li><a href="https://www.coolapk.com/" target="_blank" title="如果你是发烧机友你就来">酷安网</a></li>
+                    <li><a href="https://www.52pojie.cn/" target="_blank" title="我爱破解">52破解网</a>
+                    </li>
+                    <li><a href="https://www.52dfg.com/" target="_blanck" title="专注于PC端破解软件研发">巅峰阁社区</a></li>
+                    <li><a href="#" target="#" title="我要自学网，您身边的教育专家">我要自学网</a>
+                    </li>
+                    <li><a href="#" target="#" title="全网无损音乐免费下载哦~">果核音乐搜搜</a></li>
+                    <li><a href="#" target="#" title="十分钟邮箱">十分钟邮箱</a></li>
+                    <li><a href="#" target="#" title="一个知名的汉化作者">飞扬时空</a></li>
+                    <!-- <li><a href="#" target="#" title="谷歌浏览器插件解析" >Chrome插件解析</a></li> -->
+                </ul>
+                <p style="color: #999;">&copy;2017-2019
+                    <a href="#">linkedin_yan@foxmail.com</a>
+                    <a href="#">版权所有</a>
+                </p>
+                <p>站长统计</p>
+            </div>
+        </div>
+    </footer>
+    <!-- 打赏区域弹出层 -->
+    <div class="rewards" data-event="rewards-close" style="display: none;">
+    </div>
+    <div class="rewards-layer" style="display: none;">
+        <h3>觉得文章有用就打赏一下文章作者</h3>
+        <div class="rewards-item">
+            <h4>支付宝扫一扫打赏</h4>
+            <img src="../images3/zfbplay.jpg">
+        </div>
+        <div class="rewards-item">
+            <h4>微信扫一扫打赏</h4>
+            <img src="../images3/wxplay.png">
+        </div>
+        <span class="rewards-layer-close" data-event="rewards-close"><i class="fa fa-close"></i></span>
+    </div>
+    <!-- 返回顶部区域 -->
+    <div class="toolbar">
+        <a href="###" class="toolbar-item toolbar-item-weixin">
+        <span class="toolbar-layer"></span>
+        </a>
+        <a href="###" class="toolbar-item toolbar-item-feedback"></a>
+         <span class="toolbar-layer"></span>
+        </a>
+        <a href="javascript:scroll(0,0)" id="top" class="toolbar-item toolbar-item-top"></a>
+     </div>
+    <!-- 一般网页先加载完页面再加载JS文件,这样方便 -->
+    <!-- 7.jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="../js/jquery-3.3.1.js"></script>
+
+    <!-- 8.加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../js/bootstrap.js"></script>
+    <!-- 9.最后载入自己的JS代码 -->
+    <script src="../js/index.js"></script>
+    <!-- 10.注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
+</body>
+
+</html>

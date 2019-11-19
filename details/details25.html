@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>	Snipaste免费屏幕截图软件 </title>
+    <!-- 1.引入font-awesome字体图标 -->
+    <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.css">
+    <!-- 2.引入Bootstrap 样式-->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <!-- 3.引用个人定义的welcome主页样式 -->
+    <link rel="stylesheet" href="../css/welcome.css" /> <!-- !important 优先级最高 -->
+    <!-- 4.引入所有页面的公共样式 -->
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- 5.HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 6.警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <script src="../lib/html5shiv/html5shiv.js"></script>
+    <script src="../lib/respond/respond.js"></script>
+    <style>
+       /* body { background: url(../images/bg02.jpg) no-repeat fixed left top; } */
+       .bodyin { width: 1350px; }
+
+        h3[class="text-muted"]:hover { cursor: pointer; color: #428bca; font-weight: bold; }
+
+        /* 这里注意的是,行内式的优先级大于内嵌式的,如果行内式的<a>设置了颜色,那么再设置a悬浮的颜色是不生效的 */
+        /* 1.最近更新样式 */
+    </style>
+</head>
+
+<body class="" style="background: #fff;">
+    <div class="container form-group ">
+        <nav class="row">
+            <ul class="list-inline pull-left">
+                <li style="width: 100px;"><a href="../diary/myhome.html"><i class="glyphicon glyphicon-home"></i>&nbsp;&nbsp;我的主页</a></li>
+                <li style="width: 100px;"><a href="../diary/hot.html"><i class="glyphicon glyphicon-fire"></i>&nbsp;&nbsp;热点放送</a></li>
+                <li style="width: 100px;"><a href="../diary/album.html"><i class="fa fa-graduation-cap"></i>&nbsp;&nbsp;干货文章</a></li>
+                <li style="width: 100px;"><a href="../diary/waterfall.html"><i class="glyphicon glyphicon-picture"></i>&nbsp;&nbsp;图片墙</a></li>
+                <li style="width: 100px;"><a href="../diary/source.html"><i class="glyphicon glyphicon-book"></i>&nbsp;&nbsp;阅览室</a></li>
+                <li style="width: 100px;"><a href="../fullPage/fullpage.html"><i class="fa fa-cloud"></i>&nbsp;&nbsp;博客介绍</a></li>
+                <li style="width: 100px;"><a href="../diary/y_info.html"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;个人中心</a></li>
+            </ul>
+            <span id="time" class="pull-right a"></span>
+        </nav>
+         <!-- ！下拉滚动条显示导航栏 -->
+		<div class="nav2">
+            <div class="yxw_head">
+                <div class="left">
+                    <ul class="ul">
+                        <li><a href="../diary/myhome.html"><i class="glyphicon glyphicon-home"></i>&nbsp;我的主页</a></li>
+                        <li><a class="over" href="../diary/hot.html"><i class="glyphicon glyphicon-fire"></i>&nbsp;热点放送</a></li>
+                        <li><a href="../diary/album.html"><i class="fa fa-graduation-cap"></i>&nbsp;干货文章</a></li>
+                        <li><a href="../diary/waterfall.html"><i class="glyphicon glyphicon-picture"></i>&nbsp;图片墙</a></li>
+                        <li><a href="../diary/source.html"><i class="glyphicon glyphicon-book" ></i>&nbsp;阅览室</a></li>
+                        <li><a href="../fullPage/fullpage.html"><i class="fa fa-cloud"></i>&nbsp;博客介绍</a></li>
+                        <li><a href="../diary/y_info.html"><i class="glyphicon glyphicon-user"></i>&nbsp;个人中心</a></li>
+                    </ul>
+                </div>
+                <div class="right pull-right yxw_log">
+                    <a class="lg-layer cursor-pointer" target="_self" onclick="window.location = 'http://localhost:88/Yxw毕业设计/diary/login.php'">登录</a>
+                    <div class="left rnavlin"></div>
+                    <a class="lg-layer cursor-pointer" href="#" onclick="window.location='http://localhost:88/Yxw毕业设计/diary/404.html'">注册</a>            
+                </div>
+            </div>
+        </div>
+        <!-- 导航区域注释掉 -->
+        <!-- <div class="header form-group">
+            <div class="header-info">
+                <div class="header-avatar"><img src="../images/logo1.png" /></div>
+                <div class="header-wrap">
+                    <div class="header-user h3">我的博客</div>
+                    <div class="header-opt">
+                        <span class="btn ">关注我</span><span class="btn">分享</span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav">
+                <a href="../diary/myhome.html">我的主页</a><a href="./hot.html" class="curr">热点放送</a><a
+                    href="../diary/album.html">干货文章</a><a href="../diary/waterfall.html">图片墙</a>
+            </div>
+        </div> -->
+        <div class="navbar navbar-default pull-left" role="navigation">
+            <div class="">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Yxw-资源阅览室</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="menu-item-146" class="">
+                        <a href="../diary/myhome.html">
+                            <i class="glyphicon glyphicon-home"></i>&nbsp;我的主页
+                        </a>
+                    </li>
+                    <li id="menu-item-146" class="">
+                        <a href="../diary/hot.html">
+                            <i class="glyphicon glyphicon-fire"></i>&nbsp;热点放送
+                        </a>
+                    </li>
+                    <li id="menu-item-146" class="">
+                        <a href="../diary/album.html">
+                            <i class="fa fa-graduation-cap"></i>&nbsp;干货文章
+                        </a>
+                    </li>
+                    <li id="menu-item-146" class="">
+                        <a href="../diary/waterfall.html">
+                            <i class="glyphicon glyphicon-picture"></i>&nbsp;图片墙
+                        </a>
+                    </li>
+                    <li><a class="cursor-pointer" onclick="window.location = 'http://localhost:88/Yxw毕业设计/diary/login.php'"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+                    <li><a class="cursor-pointer" onclick="window.location = 'http://localhost:88/Yxw毕业设计/diary/404.html'"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="请输入搜索内容" onfocus="this.placeholder=''"
+                                onblur="this.placeholder='请输入搜索内容'">
+                        </div>
+                        <button type="submit" class="btn btn-default">提交</button>
+                    </form>
+                </ul>
+            </div>
+        </div>
+        <div class="current_location pull-left" style="margin-top: 0px;">
+            <div class="container">当前位置：
+                <a href="../diary/myhome.html">首页</a> <small>&gt;</small> <a href="../diary/source.html">阅览室</a>
+                <small>&gt;</small> 正文
+            </div>
+        </div>
+        <section class="">
+            <!-- 左边栏部分 -->
+            <div class="content-wrap">
+                <div class="content pull-left">
+                    <header class="article-header">
+                        <h1 class="article-title text-center h1">
+                            <a  class="clear_a cursor-pointer">免费小巧的截图工具 Snipaste 1.6.2 官方中文版</a>
+                        </h1>
+                        <div class="article-meta text-center">
+                            <span class="item text-muted">2019-10-08</span>
+                            <span class="item">来源：
+                                <a href="#" class="clear_a" target="_blank">Snipaste官方</a>
+                            </span>
+                            <span class="item">分类：
+                                <a href="#" class="clear_a">Windows</a>/
+                                <a href="#" class="clear_a">PC</a>
+                            </span>
+                            <span class="item">评论(2)</span>
+                            <span class="item"></span>
+                        </div>
+                    </header>
+                    <article class="article-content pull-left" style="width: 680px;;height: auto;">
+                        <p>Snipaste 是一个简单但强大的截图工具，也可以让你将截图贴回到屏幕上！下载并打开 Snipaste，按下 F1 来开始截图，再按 F3，截图就在桌面置顶显示了。就这么简单！</p>
+                        <figure class="wp-block-image">
+                            <img class="thumbnail" src="../images3/details25_1.png"
+                                alt="Adobe Premiere Pro" style="margin: 0 auto;" />
+                            <figcaption class="text-center" style="margin: 10px;">Snipaste多种颜色可选</figcaption>
+                        </figure>
+                        <p>你还可以将剪贴板里的文字或者颜色信息转化为图片窗口，并且将它们进行缩放、旋转、翻转、设为半透明，甚至让鼠标能穿透它们！如果你是程序员、设计师，或者是大部分工作时间都在电脑前，贴图功能将改变你的工作方式、提升工作效率。</p>
+                        <figure class="wp-block-image">
+                            <img class="thumbnail" src="../images3/details25_2.png"
+                                alt="Adobe Dreamweaver" />
+                            <figcaption class="text-center" style="margin: 10px;">Snipaste的贴图和标记功能</figcaption>
+                        </figure>
+                        
+                        <h2 class="primary"><strong>软件功能介绍</strong></h2>
+                        <p>Snipaste 使用很简单，但同时也有一些较高级的用法可以进一步提升你的工作效率。感兴趣的话，请抽空读一读用户手册。</p>
+                        <p>Snipaste 是免费软件，它也很安全，没有广告、不会扫描你的硬盘、更不会上传用户数据，它只做它应该做的事。</p>
+                        <figure class="wp-block-image">
+                            <img class="thumbnail" src="../images3/details25_3.png"
+                                alt="Adobe Dreamweaver" />
+                            <figcaption class="text-center" style="margin: 10px;"></figcaption>
+                        </figure>
+                        <h2 class="primary"><strong>官网</strong></h2>
+                        <p><a href="https://zh.snipaste.com/" class="href" target="_blank" >https://zh.snipaste.com/</a></p>
+                        <!-- 下载地址1 -->
+                        <h3><span style="color: #ff0000;">2019版</span></h3>
+                        <p>百度网盘：<a class="href" href="https://pan.baidu.com/s/1UFiFyvMlzXX_Qs06rAXdKg" target="_blank" >https://pan.baidu.com/s/1UFiFyvMlzXX_Qs06rAXdKg</a></p>
+                        <!-- 下载地址2
+                        <h3><span style="color: #ff0000;">2019版</span></h3>
+                        <p>百度网盘：<a class="href" href="https://pan.baidu.com/s/1jMx_WvRmjNoDYcuaYrtu-g " target="_blank" >https://pan.baidu.com/s/1jMx_WvRmjNoDYcuaYrtu-g </a>&nbsp;提取码：8atd</p> -->
+                        <div class="article-nav">
+                            <span class="article-nav-prev">上一篇<br><a href="#" class="a_blue"
+                                    rel="prev">	上一篇没有了  </a></span>
+                            <span class="article-nav-next">下一篇<br><a href="../details/details26.html" class="a_blue"
+                                    rel="next"> 数据恢复/硬盘分区管理软件 </a></span>
+                        </div>
+                        <!-- <figure class="img01">
+                                <img class="img-thumbnail" src="../images3/数据库结构-741x362.png"
+                                    alt="数据库结构" class="wp-image-01"data-tag="bdshare">
+                                <figcaption class="text-center">数据库结构</figcaption>
+                        </figure> -->
+                        <!-- 赞和打赏区域 -->
+                        <div class="post-actions" style="margin-top: 0px;">
+                            <a href="javascript:;" class="post-like action action-like"><i
+                                    class="fa fa-thumbs-o-up"></i>赞(<span>5</span>)</a>
+                            <a href="javascript:;" class="action action-rewards" data-event="rewards"><i
+                                    class="fa fa-jpy"></i> 打赏</a>
+                        </div>
+                        <!-- 未经允许不得转载 -->
+                        <div class="post-copyright">未经允许不得转载：
+                            <a href="#">爱带伞的小毛头</a> »
+                            <a href="#"> Snipaste免费屏幕截图软件</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <!-- 右边侧边栏 -->
+            <div class="sidebar">
+                <!-- 关于我们，个人博客-热点放送页 -->
+                <div class="sild01 pull-left cursor-pointer" style="height: 168px;margin-top: 28px;">
+                    <a class="style01" href="#">
+                        <strong>关于我们</strong>
+                        <h2 class="a" style="color: #428bca;">Yxw-个人博客阅览室页</h2>
+                        <p>网页持续开发中ing....</p>
+                        <address>
+                        </address>
+                    </a>
+                </div>
+                <!-- 天气预报一栏 -->
+                <div class="weather cursor-pointer pull-left">
+                    <iframe width="399" scrolling="no" height="72" frameborder="0" allowtransparency="true"
+                        src="//i.tianqi.com/index.php?c=code&id=2&bdc=%23&icon=1&num=2&site=12">
+                    </iframe>
+                </div>
+                <!-- 网站公告-会员中心 -->
+                <div class="sild01 pull-left cursor-pointer notice" style="height: 176px;">
+                    <!-- 导航栏标题 pills表示胶囊式导航菜单 -->
+                    <ul class="nav nav-pills">
+                        <li class="active text-danger"><a data-toggle="tab" href="#home">网站公告</a></li>
+                        <li><a data-toggle="tab" href="#menu1">会员中心</a></li>
+                    </ul>
+                    <!-- 导航里的内容  -->
+                    <div class="tab-content">
+                        <!-- 导航里第一页的内容 -->
+                        <div id="home" class="tab-pane fade in active">
+                            <div class="item item-01">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <time class="" >11-01</time> <a class="a" href="#" style="font-weight: bold;font-family: '黑体';"> 必读||欢迎来到我的网站</a>
+                                    </li>
+                                    <li>
+                                        <time class="" ></time>10-26</time><a class="a" href="../details/details02.html"> 必用||XMind思维导图直装内购特别版Android </a>
+                                    </li>
+                                    <li>
+                                        <time class="" ></time>10-26</time><a class="a" href="../details/details03.html"> 必用||会声会影2019一键安装破解版</a>
+                                    </li>
+                                    <li>
+                                        <time class="" ></time>10-25</time><a class="a" href="../details/details04.html"> 必用||MusicTools无损付费音乐免费下载工具</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 导航里第二页的内容 -->
+                        <div id="menu1" class="tab-pane fade">
+                            <div class="item item-02">
+                                <h4 class="h4">需要登录才能进入会员中心</h4>
+                                <p>
+                                    <a href="#" onclick="window.location = 'http://localhost:88/Yxw毕业设计/diary/login.php'" class="btn btn-info signin-loader">立即登录</a>
+                                    <a href="#" onclick="window.location='http://localhost:88/Yxw毕业设计/diary/404.html'" class="btn btn-default signup-loader">现在注册</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 网站公告 会员中心 end -->
+
+                <!-- 最新公告 -->
+                <div class="sild01 sild02 pull-left cursor-pointer" style="margin-top: 0px;">
+                    <a>
+                        <strong>最新通知</strong>
+                        <h2>最新公告</h2>
+                        <p>欢迎来到本网站,所有最新发布的热点都可在本网站中浏览。</p>
+                    </a>
+                </div>
+                <!-- 全站下载须知 -->
+                <div class="sild01 sild02 pull-left cursor-pointer" style="top: 0px;">
+                    <a>
+                        <strong>用户必看</strong>
+                        <h2>全站下载须知</h2>
+                        <p>
+                            如果有问题，欢迎咨询我们，最简单的方式是点击电脑屏幕右下方微信标志快速与我建立会话，扫描二维码以后与我取得联系。
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- 底部区域 -->
+    <footer>
+        <div class="branding branding-black">
+            <div class="container">
+                <h2>互动交流</h2>
+                <!-- #7cbe63 -->
+                <a target="blank" class="btn btn-lg scan-wx" href="#">微信二维码</a>
+                <a target="blank" class="btn btn-lg scan-qq" href="#">QQ二维码</a>
+                <div class="scan">
+                    <img class="img-thumbnail img-wx" src="../images3/wechat-120x120.jpg" alt="scan扫描">
+                    <!-- <div style="width: 12px;display: inline-block;"></div> -->
+                    <img class="img-thumbnail img-qq" src="../images3/qq-120x120.jpg" alt="scan扫描">
+                </div>
+            </div>
+            <div class="copy">
+                <strong class="h3" style="margin-top: 10px" ;>友情链接</strong>
+                <ul class="list-unstyled list-inline form-group" style="margin-top: 15px;">
+                    <li><a href="https://www.baidu.com/" target="_blanck" title="百度导航，做一个强大的导航">百度导航</a></li>
+                    <li><a href="https://www.coolapk.com/" target="_blanck" title="如果你是发烧机友你就来">酷安网</a></li>
+                    <li><a href="#" target="#" title="我爱破解">52破解网</a>
+                    </li>
+                    <li><a href="https://www.52dfg.com/" target="_blanck" title="专注于PC端破解软件研发">巅峰阁社区</a></li>
+                    <li><a href="#" target="#" title="我要自学网，您身边的教育专家">我要自学网</a>
+                    </li>
+                    <li><a href="#" target="#" title="全网无损音乐免费下载哦~">果核音乐搜搜</a></li>
+                    <li><a href="#" target="#" title="十分钟邮箱">十分钟邮箱</a></li>
+                    <li><a href="#" target="#" title="一个知名的汉化作者">飞扬时空</a></li>
+                    <!-- <li><a href="#" target="#" title="谷歌浏览器插件解析" >Chrome插件解析</a></li> -->
+                </ul>
+                <p style="color: #999;">&copy;2017-2019
+                    <a href="#">linkedin_yan@foxmail.com</a>
+                    <a href="#">版权所有</a>
+                </p>
+                <p>站长统计</p>
+            </div>
+        </div>
+    </footer>
+    <!-- 打赏区域弹出层 -->
+    <div class="rewards" data-event="rewards-close" style="display: none;">
+    </div>
+    <div class="rewards-layer" style="display: none;">
+        <h3>觉得文章有用就打赏一下文章作者</h3>
+        <div class="rewards-item">
+            <h4>支付宝扫一扫打赏</h4>
+            <img src="../images3/zfbplay.jpg">
+        </div>
+        <div class="rewards-item">
+            <h4>微信扫一扫打赏</h4>
+            <img src="../images3/wxplay.png">
+        </div>
+        <span class="rewards-layer-close" data-event="rewards-close"><i class="fa fa-close"></i></span>
+    </div>
+    <!-- 返回顶部区域 -->
+    <div class="toolbar">
+        <a href="###" class="toolbar-item toolbar-item-weixin">
+            <span class="toolbar-layer"></span>
+        </a>
+        <a href="###" class="toolbar-item toolbar-item-feedback"></a>
+        <span class="toolbar-layer"></span>
+        </a>
+        <a href="javascript:scroll(0,0)" id="top" class="toolbar-item toolbar-item-top"></a>
+    </div>
+    <!-- 一般网页先加载完页面再加载JS文件,这样方便 -->
+    <!-- 7.jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="../js/jquery-3.3.1.js"></script>
+
+    <!-- 8.加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../js/bootstrap.js"></script>
+    <!-- 9.最后载入自己的JS代码 -->
+    <script src="../js/index.js"></script>
+    <!-- 10.注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
+</body>
+
+</html>

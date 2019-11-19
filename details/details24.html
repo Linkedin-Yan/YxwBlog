@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>PHP+MySQL教程二：短风格和ASP风格代码块的设置方法 </title>
+    <!-- 1.引入font-awesome字体图标 -->
+    <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.css">
+    <!-- 2.引入Bootstrap 样式-->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <!-- 3.引用个人定义的welcome主页样式 -->
+    <link rel="stylesheet" href="../css/welcome.css" /> 
+    <!-- 4.引入所有页面的公共样式 -->
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- 5.HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 6.警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <script src="../lib/html5shiv/html5shiv.js"></script>
+    <script src="../lib/respond/respond.js"></script>
+    <style>
+       
+
+        h3[class="text-muted"]:hover {
+            cursor: pointer;
+            color: #428bca;
+            font-weight: bold;
+        }
+
+        /* 这里注意的是,行内式的优先级大于内嵌式的,如果行内式的<a>设置了颜色,那么再设置a悬浮的颜色是不生效的 */
+        /* 1.最近更新样式 */
+    </style>
+</head>
+
+<body class="" style="background: #fff;">
+    <div class="container form-group ">
+        <nav class="row">
+            <ul class="list-inline pull-left">
+                <li style="width: 100px;"><a href="../diary/myhome.html"><i class="glyphicon glyphicon-home"></i>&nbsp;&nbsp;我的主页</a></li>
+                <li style="width: 100px;"><a href="../diary/hot.html"><i class="glyphicon glyphicon-fire"></i>&nbsp;&nbsp;热点放送</a></li>
+                <li style="width: 100px;"><a href="../diary/album.html"><i class="fa fa-graduation-cap"></i>&nbsp;&nbsp;干货文章</a></li>
+                <li style="width: 100px;"><a href="../diary/waterfall.html"><i class="glyphicon glyphicon-picture"></i>&nbsp;&nbsp;图片墙</a></li>
+                <li style="width: 100px;"><a href="../diary/source.html"><i class="glyphicon glyphicon-book"></i>&nbsp;&nbsp;阅览室</a></li>
+                <li style="width: 100px;"><a href="../fullPage/fullpage.html"><i class="fa fa-cloud"></i>&nbsp;&nbsp;博客介绍</a></li>
+                <li style="width: 100px;"><a href="../diary/y_info.html"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;个人中心</a></li>
+            </ul>
+            <span id="time" class="pull-right a"></span>
+        </nav>
+        <!-- <div class="header form-group">
+            <div class="header-info">
+                <div class="header-avatar"><img src="../images/logo1.png" /></div>
+                <div class="header-wrap">
+                    <div class="header-user h3">我的博客</div>
+                    <div class="header-opt">
+                        <span class="btn ">关注我</span><span class="btn">分享</span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav">
+                <a href="../diary/myhome.html">我的主页</a><a href="./hot.html" class="curr">热点放送</a><a
+                    href="../diary/album.html">干货文章</a><a href="../diary/waterfall.html">图片墙</a>
+            </div>
+        </div> -->
+        <!-- bootstrap导航标签开始 -->
+        <div class="navbar navbar-default pull-left" role="navigation">
+            <div class="">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Yxw-个人博客干货文章页</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="menu-item-146" class="">
+                        <a href="../diary/myhome.html">
+                            <i class="glyphicon glyphicon-home"></i>&nbsp;我的主页
+                        </a>
+                    </li>
+                    <li id="menu-item-146" class="">
+                        <a href="../diary/hot.html">
+                            <i class="glyphicon glyphicon-fire"></i>&nbsp;热点放送
+                        </a>
+                    </li>
+                    <li id="menu-item-146" class="">
+                        <a href="../diary/album.html">
+                            <i class="fa fa-graduation-cap"></i>&nbsp;干货文章
+                        </a>
+                    </li>
+                    <li id="menu-item-146" class="">
+                        <a href="../diary/waterfall.html">
+                            <i class="glyphicon glyphicon-picture"></i>&nbsp;图片墙
+                        </a>
+                    </li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="请输入搜索内容" onfocus="this.placeholder=''"  onblur="this.placeholder='请输入搜索内容'">
+                        </div>
+                        <button type="submit" class="btn btn-default">提交</button>
+                    </form>
+                </ul>
+              </div>
+        </div>
+         <!-- bootstrap导航标签结束 -->
+
+        <!-- <div class="current_location pull-left">
+            <div class="container">当前位置：
+                <a href="../diary/myhome.html">首页</a> <small>&gt;</small> <a
+                    href="../diary/hot.html">热点放送</a> <small>&gt;</small> 正文
+            </div>
+        </div> -->
+        <div class="breadcrumbs  pull-left ">
+            <a title="返回首页" href="../diary/myhome.html">
+                <i class="fa fa-home fa-green"></i>
+            </a> 
+            <small>&gt;</small>
+                <a href="../diary/myhome.html" class="fa-green">首页</a> 
+            <small>&gt;</small> <a href="../diary/album.html" class="fa-green">干货文章</a>
+            <small>&gt;</small> <span class="text-muted">PHP+MySQL教程二：短风格和ASP风格代码块的设置方法 </span>
+        </div>
+        <section class="pull-left">
+            <!-- 左边栏部分 -->
+            <div class="content-wrap">
+                <div class="content pull-left">
+                    <header class="article-header">
+                        <h1 class="article-title text-left h1 details_h1">
+                            <a href="#" class="clear_a">PPHP+MySQL教程二：短风格和ASP风格代码块的设置方法  </a>
+                        </h1>
+                        <!-- <div class="article-meta text-center">
+                            <span class="item text-muted">2019-10-30</span>
+                            <span class="item">来源：
+                                <a href="#" class="clear_a" target="_blank">利用Sass自动生成padding和margin边距样式 </a>
+                            </span> 
+                            <span class="item">分类：
+                                <a href="#" class="clear_a">毕业设计</a>
+                            </span>
+                            <span class="item">评论(1)</span>
+                            <span class="item"></span>
+                        </div> -->
+                        <div class="article-meta details_user">
+                            <span id="mute-category" class="text-muted"><i class="fa fa-list-alt "></i><a class="fa-green" href="https://cuiqingcai.com/category/technique/html">PHP</a></span>
+                            <span class="text-muted"><i class="fa fa-user"></i> <a class="fa-green" href="https://cuiqingcai.com/author/cqcre">爱带伞的小毛头</a></span>
+                            <time class="text-muted"><i class="fa fa-clock-o"></i> 2018-10-29 22:41</time>
+                            <span class="text-muted"><i class="fa fa-eye"></i> 6浏览</span>
+                            <span class="text-muted"><i class="fa fa-comments-o"></i> <a class="fa-green" href="https://cuiqingcai.com/3276.html#comments">1评论</a></span>
+                        </div>
+                    </header>
+                    <article class="article-content article-content21 pull-left" style="width: 680px;;height: auto;">
+                        <p>本文主要以wampserver为例讲述短风格和ASP风格代码块的设置方法。</p>
+                        <p>服务器图标点击PHP里面找到php.ini文件，ctrl+f查找short，设置短风格开关为on，即short_open_tag=On</p>
+                        <a href="#" class="text-center" style="margin: 0 100px;">
+                            <img src="../images3/24-php短标记风格_01.jpg" alt="php短标记风格的设置">
+                        </a>
+                        <p>搜索asp，设置asp风格开关为on，即asp_tags=On </p>
+                        <a href="#" class="text-center" style="margin: 0 130px;">
+                            <img src="../images3/24-php短标记风格_02.jpg" alt="php短标记风格的设置">
+                        </a>
+                        <p>然后重新启动所有Apache服务，设置生效。</p>
+                        <p>本文介绍了PHP的使用特点和代码块风格,希望对大家有帮助！</p>
+                        <!-- 喜欢和分享区域 -->
+                        
+                        <div class="article-nav">
+                            <span class="article-nav-prev">上一篇<br><a href="./details23.html" class="a_blue" rel="prev">几款优秀的前端UI框架  </a></span>
+                            <span class="article-nav-next">下一篇<br><a href="./details25.html" class="a_blue" rel="next">无</a></span>
+                        </div>
+                        <!-- <div class="post-actions" style="margin-top: -30px;">
+                            <a href="javascript:;" class="post-like action action-like" ><i class="fa fa-thumbs-o-up"></i>赞(<span>1</span>)</a>
+                            <a href="javascript:;" class="action action-rewards" data-event="rewards"><i class="fa fa-jpy"></i> 打赏</a>
+                        </div> -->
+                        <!-- 喜欢和分享按钮 -->
+                        <div class="article-social" style="position: relative; ">
+                            <div href="javascript:;" class="cursor-pointer" id="Addlike" style="position: absolute;bottom: 1px;left: 172px;" class="action actived" title="">
+                                <span class="count" style="position: relative;">
+                                    <ul>
+                                        <li style="position: absolute; left: -35px;top: 3px;">
+                                            <img style="width: 20px;height: 20px;" class="img26" src="../images2/yizan.png">
+                                            <p class="likes" style="color: white; margin-top: -10px;">14</p>
+                                        </li>
+                                    </ul>
+                                </span>
+                            </div>
+                            <span class="or">or</span>
+                            <div class="action action-share cursor-pointer" style="position: absolute;bottom: 0px;">
+                                <i class="fa fa-share-alt"></i>分享
+                                (<span class="" data-cmd="count" title="累计分享0次">0</span>)
+                                <div class="action-popover">
+                                    <div class="popover top in">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            <a href="#" class="sinaweibo fa fa-weibo" data-cmd="tsina" title="分享到新浪微博"
+                                                data-original-title="分享到新浪微博">
+                                            </a>
+                                            <a href="#" class="bds_qzone fa fa-star" data-cmd="qzone" title="分享到QQ空间"
+                                                data-original-title="分享到QQ空间">
+                                            </a>
+                                            <a href="#" class="tencentweibo fa fa-tencent-weibo" data-cmd="tqq" title="分享到腾讯微博"
+                                                data-original-title="分享到腾讯微博">
+                                            </a>
+                                            <a href="#" class="qq fa fa-qq" data-cmd="sqq" title="分享到QQ好友" data-original-title="分享到QQ好友">
+                                            </a>
+                                            <a href="#" class="bds_renren fa fa-renren" data-cmd="renren" title="分享到人人网"
+                                                data-original-title="分享到人人网">
+                                            </a>
+                                            <a href="#" class="bds_weixin fa fa-weixin" data-cmd="weixin" title=""
+                                                data-original-title="分享到微信"></a><a href="#" class="bds_more fa fa-ellipsis-h"
+                                                data-cmd="more" data-original-title="" title="分享到微信">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 未经允许不得转载 -->
+                        <div class="post-copyright">未经允许不得转载：
+                            <a href="#">爱带伞的小毛头</a> »
+                            <a href="#">PHP+MySQL教程二：短风格和ASP风格代码块的设置方法 </a>
+                        </div>
+                    <!-- 留言发布区域 -->
+                        <div id="respond" class="">
+                            <form id="commentform">
+                                <div class="comt-title">
+                                    <div class="comt-avatar pull-left">
+                                        <img alt="" src="../images2/header.png" class="avatar avatar-54 photo avatar-default"
+                                            width="54" height="54"> </div>
+                                    <div class="comt-author pull-left">
+                                        发表我的评论
+                                    </div>
+                                </div>
+                                <div class="comt">
+                                    <div class="comt-box">
+                                        <textarea placeholder="写一点什么吧..." class="input-block-level comt-area" name="w" id="comment"
+                                            cols="100%" rows="3" style="outline: none;overflow-wrap: break-word;" 
+                                            onfocus="this.placeholder=''" onblur="this.placeholder='写点什么...'">
+                                        </textarea>
+                                        <div class="comt-ctrl">
+                                            <button class="btn btn-primary pull-right" type="button" name="submit" id="submit">
+                                                <i class="fa fa-check-square-o"></i> 提交评论
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" id="ak_js" name="ak_js" value="1573039855552">
+                            </form>
+                        </div>
+                    </article>
+                    <!-- 基于SSM的在线学习平台 -->
+                    <!-- 741x362.png -->
+                </div>
+            </div>
+            <!-- 右边侧边栏 -->
+            <div class="sidebar">
+                <!-- 关于我们，个个人博客-干货文章页 -->
+                <div class="sild01 pull-left cursor-pointer" style="height: 168px;margin-top: 28px;">
+                    <a class="style01" href="#" >
+                        <strong>关于我们</strong>
+                        <h2 class="a" style="color: #428bca;">Yxw-个人博客干货文章页</h2>
+                        <p>网页持续开发中ing....</p>
+                        <address>
+                        </address>
+                    </a>
+                </div>
+                <!-- 天气预报一栏 -->
+                <div class="weather cursor-pointer pull-left">
+                    <iframe width="399" scrolling="no" height="72" frameborder="0" allowtransparency="true" src="//i.tianqi.com/index.php?c=code&id=2&bdc=%23&icon=1&num=2&site=12">
+                    </iframe>
+                </div>
+                <!-- 网站公告-会员中心 -->
+                <div class="sild01 pull-left cursor-pointer notice" style="height: 176px;">
+                    <!-- 导航栏标题 pills表示胶囊式导航菜单 -->
+                    <ul class="nav nav-pills">
+                        <li class="active text-danger"><a data-toggle="tab" href="#home">网站公告</a></li>
+                        <li><a data-toggle="tab" href="#menu1">会员中心</a></li>
+                    </ul>
+                    <!-- 导航里的内容  -->
+                    <div class="tab-content">
+                        <!-- 导航里第一页的内容 -->
+                        <div id="home" class="tab-pane fade in active">
+                            <div class="item item-01">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <time class="" ></time>11-01</time><a class="a" href="#"> 必读||欢迎来到我的网站</a>
+                                    </li>
+                                    <li>
+                                        <time class="" ></time>10-26</time><a class="a" href="../details/details02.html"> 必用||XMind思维导图直装内购特别版Android </a>
+                                    </li>
+                                    <li>
+                                        <time class="" ></time>10-26</time><a class="a" href="../details/details03.html"> 必用||会声会影2019一键安装破解版</a>
+                                    </li>
+                                    <li>
+                                        <time class="" ></time>10-25</time><a class="a" href="../details/details04.html"> 必用||MusicTools无损付费音乐免费下载工具</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 导航里第二页的内容 -->
+                        <div id="menu1" class="tab-pane fade">
+                            <div class="item item-02">
+                                <h4 class="h4">需要登录才能进入会员中心</h4>
+                                <p>
+                                    <a href="./login.html" class="btn btn-info signin-loader">立即登录</a>
+                                    <a href="javascript:;" class="btn btn-default signup-loader">现在注册</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 网站公告 会员中心 end -->
+
+                <!-- 最新公告 -->
+                <div class="sild01 sild02 pull-left cursor-pointer" style="margin-top: 0px;">
+                    <a href="#">
+                        <strong>最新通知</strong>
+                        <h2>最新公告</h2>
+                        <p>欢迎来到本网站,所有最新发布的热点都可在本网站中浏览。</p>
+                    </a>
+                </div>
+                <!-- 全站下载须知 -->
+                <div class="sild01 sild02 pull-left cursor-pointer" style="top: 0px;">
+                    <a href="#">
+                        <strong>用户必看</strong>
+                        <h2>全站下载须知</h2>
+                        <p>
+                            如果有问题，欢迎咨询我们，最简单的方式是点击电脑屏幕右下方微信标志快速与我建立会话，扫描二维码以后与我取得联系。
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- 底部区域 -->
+    <footer>
+        <div class="branding branding-black">
+            <div class="container">
+                <h2>互动交流</h2>
+                <!-- #7cbe63 -->
+                <a target="blank" class="btn btn-lg scan-wx" href="#">微信二维码</a>
+                <a target="blank" class="btn btn-lg scan-qq" href="#">QQ二维码</a>
+                <div class="scan">
+                    <img class="img-thumbnail img-wx" src="../images3/wechat-120x120.jpg" alt="scan扫描">
+                    <!-- <div style="width: 12px;display: inline-block;"></div> -->
+                    <img class="img-thumbnail img-qq" src="../images3/qq-120x120.jpg" alt="scan扫描">
+                </div>
+            </div>
+            <div class="copy">
+                <strong class="h3" style="margin-top: 10px" ;>友情链接</strong>
+                <ul class="list-unstyled list-inline form-group" style="margin-top: 15px;">
+                    <li><a href="https://www.baidu.com/" target="_blank" title="百度导航，做一个强大的导航">百度导航</a></li>
+                    <li><a href="https://www.coolapk.com/" target="_blank" title="如果你是发烧机友你就来">酷安网</a></li>
+                    <li><a href="https://www.52pojie.cn/" target="_blank" title="我爱破解">52破解网</a>
+                    </li>
+                    <li><a href="https://www.52dfg.com/" target="_blanck" title="专注于PC端破解软件研发">巅峰阁社区</a></li>
+                    <li><a href="#" target="#" title="我要自学网，您身边的教育专家">我要自学网</a>
+                    </li>
+                    <li><a href="#" target="#" title="全网无损音乐免费下载哦~">果核音乐搜搜</a></li>
+                    <li><a href="#" target="#" title="十分钟邮箱">十分钟邮箱</a></li>
+                    <li><a href="#" target="#" title="一个知名的汉化作者">飞扬时空</a></li>
+                    <!-- <li><a href="#" target="#" title="谷歌浏览器插件解析" >Chrome插件解析</a></li> -->
+                </ul>
+                <p style="color: #999;">&copy;2017-2019
+                    <a href="#">linkedin_yan@foxmail.com</a>
+                    <a href="#">版权所有</a>
+                </p>
+                <p>站长统计</p>
+            </div>
+        </div>
+    </footer>
+    <!-- 打赏区域弹出层 -->
+    <div class="rewards" data-event="rewards-close" style="display: none;">
+    </div>
+    <div class="rewards-layer" style="display: none;">
+        <h3>觉得文章有用就打赏一下文章作者</h3>
+        <div class="rewards-item">
+            <h4>支付宝扫一扫打赏</h4>
+            <img src="../images3/zfbplay.jpg">
+        </div>
+        <div class="rewards-item">
+            <h4>微信扫一扫打赏</h4>
+            <img src="../images3/wxplay.png">
+        </div>
+        <span class="rewards-layer-close" data-event="rewards-close"><i class="fa fa-close"></i></span>
+    </div>
+    <!-- 返回顶部区域 -->
+    <div class="toolbar">
+        <a href="###" class="toolbar-item toolbar-item-weixin">
+        <span class="toolbar-layer"></span>
+        </a>
+        <a href="###" class="toolbar-item toolbar-item-feedback"></a>
+         <span class="toolbar-layer"></span>
+        </a>
+        <a href="javascript:scroll(0,0)" id="top" class="toolbar-item toolbar-item-top"></a>
+     </div>
+    <!-- 一般网页先加载完页面再加载JS文件,这样方便 -->
+    <!-- 7.jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="../js/jquery-3.3.1.js"></script>
+
+    <!-- 8.加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../js/bootstrap.js"></script>
+    <!-- 9.最后载入自己的JS代码 -->
+    <script src="../js/index.js"></script>
+    <!-- 10.注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
+</body>
+
+</html>
