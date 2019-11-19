@@ -1,0 +1,71 @@
+/* 导航栏部分 */
+header nav{
+  width: 100%;  
+    height: 100px;
+    /* border: 1px solid #000; */
+}
+header nav ul{
+  width: 100%;
+  height: 50px;
+}
+header .menu>li{
+  width: 100px;
+  height: 50px;
+  float: left;
+}
+header .menu li a{
+  display: block;
+  width: 100px;
+  height: 50px;
+  margin: 0 auto;
+  line-height: 50px;
+  text-align: center;
+}
+
+nav .menu{
+    
+}
+nav .menu li a{
+    float: left;
+}
+nav .menu li a:hover{
+  background-color: #2abbc0;
+}
+/* 标题图片 */
+header .title{
+  /* margin-top: 100px; */
+}
+header 
+/*轮播图部分*/
+.yxw-banner {
+  margin-top: 100px;
+  width: 800px;
+  height: 200px;
+  float: left;
+}
+.yxw-banner .pic {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  background-position: center center;
+}
+.yxw-banner .carousel .carousel-inner {
+  /* width: 100%; */
+  width: 800px;
+  height: 200px;
+  /* position: relative; */
+  /* overflow: hidden; */
+}
+.yxw-banner .carousel .carousel-inner .item img {
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+/* 轮播图以下样式 */
+.container h3{
+  margin-top: 20px;
+}
+.tool .list div{
+  width: 960px;
+  height: 200px;
+}

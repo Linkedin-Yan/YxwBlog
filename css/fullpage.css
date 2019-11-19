@@ -1,0 +1,146 @@
+*{margin: 0;padding: 0;}
+.box{}
+.seciton{}
+/*第一屏的样式*/
+.first{}
+.first .log{
+	width: 251px;height: 205px;
+	background: url("../imagesFull/1_logo.png") no-repeat;
+	margin: 0 auto;
+}
+.first .text{
+	width: 100%;margin-top: 80px;
+	text-align: center;
+	transition: all 1.5s;
+	color: white;font-size: 58px;font-family: '黑体';letter-spacing: 0.5em;
+	cursor: pointer;
+}
+.first .info{
+	width: 772px;height: 49px;
+	/* background: url("../imagesFull/1_info.png"); */
+	margin: 60px auto;
+	color: white;font-size: 48px;font-family: '黑体';letter-spacing: 0.1em;
+	cursor: pointer;
+}
+.first.current .text img{
+	margin: 0 5px;
+	opacity: 1;
+}
+/*第二屏的样式*/
+/*第三屏的样式*/
+/*第四屏的样式*/
+.fourth{
+	position: relative;
+}
+.fourth .move{
+	width: 529px;height: 439px;
+	position: absolute;
+	left:50%;top:50%;
+	transform: translate(-105%,-50%);
+}
+.fourth .move .search{
+	width: 529px;height: 66px;
+	background: url("../imagesFull/4_search.png");
+	transform: translateX(-1000%);
+}
+.fourth .move .key{
+	/*width: 99px;*/
+	width: 0;height: 22px;
+	background: url("../imagesFull/4_key.png");
+	position: absolute;top: 23px;left: 22px;
+}
+.fourth .move .result{
+	width: 529px;height:0;
+	/*height: 372px;*/
+	background: url("../imagesFull/4_result.png");
+	position: absolute;top: 56px;left: 0;
+}
+.fourth .info{
+	width: 612px;height: 299px;
+	position: absolute;
+	/*border: 1px solid #000;*/
+	left: 50%;top:50%;
+	background: url("../imagesFull/4_info_4.png");
+}
+/*以下设置第四屏动画出现特效*/
+.fourth.current .move .search{
+	transform: none;
+	transition: transform 1s;
+	
+}
+.fourth.current .move .key{
+	width: 99px;
+	transition: width 2s 1s steps(5);
+}
+.fourth.current .move .result{
+	height: 372px;
+	transition: height 1s 3s;
+}
+/*第五屏的样式*/
+.fifth .info{
+	width: 1077px;height: 134px;
+	background: url(../imagesFull/5_info_5.png);
+	margin: 60px auto;
+}
+.fifth .browse{
+	width: 1077px;height: 443px;
+	background-color: rgba(255,255,255,0.3);
+	margin: 160px auto;
+	position: relative;
+}
+.fifth .browse .line-top{
+	width: 100%;height: 1px;
+	background-color: #fff;
+	transform: translateX(100%);
+}
+.fifth .browse .line-bottom{
+	width: 100%;height: 1px;
+	position: absolute;
+	background-color: #fff;
+	left: 0;
+	top: 443px;
+	transform: translateX(-100%);
+}.fifth .browse .line-left{
+	height: 100%;width: 1px;
+	position: absolute;
+	background-color: #fff;
+	left: 0;
+	top: 0;
+	transform: translateY(-100%);
+}.fifth .browse .line-right{
+	height: 100%;width: 1px;
+	position: absolute;
+	background-color: #fff;
+	right: 0;
+	top: 0;
+	transform: translateY(100%);
+}
+/*线初始化*/
+.fifth.current .browse .line{
+	transform: none;
+	transition: transform 1s;
+}
+/*browse里的样式*/
+.fifth .browse .toolbar{
+	width: 1004px;height: 79px;
+	position: relative;
+	background: url(../imagesFull/5_toolbar.png);
+}
+.fifth .browse .toolbar .line-border{
+	width: 920px;height: 25px;
+	border: 1px solid #fff;
+	position: absolute;
+	left:75px ;top: 30px;
+}
+.fifth .browse .extra{
+	width: 394px;height: 29px;
+	background: url(../imagesFull/5_extra.png);
+	position: absolute;
+	right: 0;bottom: 0;
+}
+.fifth .browse .line-center{
+	width: 1077px;height: 1px;
+	background-color: #fff;
+	position: absolute;
+	left: 0;bottom: 30px;
+}
