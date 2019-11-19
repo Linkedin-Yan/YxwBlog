@@ -1,0 +1,17 @@
+/* 这里是公共样式 */
+.cursor-pointer{
+    cursor: pointer;
+}
+
+/* 博客介绍页 */
+.Yxw_tips{ font-weight: bold;color: #6dafe9; }
+/* 导航条向下滑动固定 */
+  /*导航栏变异部分*/ 
+  /* padding-left: 105px; */
+.nav2 { width: 100%; height: 50px; background: #3f4657; z-index: 9; }
+.fixnav { position: fixed; top: 0px; left: 0px; }
+.nav2 ul{width: 100%;padding-left: 105px;}
+.nav2 ul li {margin-top: -10px; width: 100px; height: 50px; line-height: 50px;  float: left; display: inline; text-align: center; color: #fff; }
+.nav2 ul li a{color: #fff; display: block;}
+.nav2 ul li a.over{color: #fff; display: block;background: #569fe8;}
+.nav2 ul li a:hover{background: #569fe8;text-decoration: none;}
