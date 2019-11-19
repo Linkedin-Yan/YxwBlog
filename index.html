@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>个人博客-我的主页</title>
+
+	<!-- 1.引入font-awesome字体图标 -->
+	<link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.css">
+	<!-- 2.引入Bootstrap 样式-->
+	<link href="./css/bootstrap.css" rel="stylesheet">
+	<!-- 3.引用个人定义的welcome主页样式 -->
+	<link rel="stylesheet" href="./css/welcome.css" /> <!-- !important 优先级最高 -->
+	<!-- 4.引入所有页面的公共样式 -->
+	<link rel="stylesheet" href="./css/base.css">
+	<!-- 5.HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+	<!-- 6.警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+	<script src="./lib/html5shiv/html5shiv.js"></script>
+	<script src="./lib/respond/respond.js"></script>
+	<style>
+		.box {
+			height: 1000px;
+		}
+		/* 这里注意,样式里面不能给出。body否则会样式冲突 */
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<nav class="row">
+			<ul class="list-inline pull-left">
+				<li style="width: 100px;""><a href="./diary/myhome.html"><i class="glyphicon glyphicon-home"></i>&nbsp;&nbsp;我的主页</a></li>
+				<li style="width: 100px;""><a href="./diary/hot.html"><i class="glyphicon glyphicon-fire"></i>&nbsp;&nbsp;热点放送</a></li>
+				<li style="width: 100px;""><a href="./diary/album.html"><i class="fa fa-graduation-cap"></i>&nbsp;&nbsp;干货文章</a></li>
+				<li style="width: 100px;""><a href="./diary/waterfall.html"><i class="glyphicon glyphicon-picture"></i>&nbsp;&nbsp;图片墙</a></li>
+				<li style="width: 100px;""><a href="./diary/source.html"><i class="glyphicon glyphicon-book"></i>&nbsp;&nbsp;阅览室</a></li>
+				<li style="width: 100px;""><a href="./fullPage/fullpage.html"><i class="fa fa-cloud"></i>&nbsp;&nbsp;博客介绍</a></li>
+				<li style="width: 100px;""><a href="./diary/y_info.html"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;个人中心</a></li>
+			</ul>
+			<span id="time" class="pull-right a"></span>
+		</nav>
+		<div class="nav2">
+			<div class="yxw_head">
+				<div class="left">
+					<ul class="ul">
+						<li><a class="over" href="./diary/myhome.html"><i class="glyphicon glyphicon-home"></i>&nbsp;我的主页</a></li>
+						<li><a href="./diary/hot.html"><i class="glyphicon glyphicon-fire"></i>&nbsp;热点放送</a></li>
+						<li><a href="./diary/album.html"><i class="fa fa-graduation-cap"></i>&nbsp;干货文章</a></li>
+						<li><a href="./diary/waterfall.html"><i class="glyphicon glyphicon-picture"></i>&nbsp;图片墙</a></li>
+						<li><a href="./diary/source.html"><i class="glyphicon glyphicon-book"></i>&nbsp;阅览室</a></li>
+						<li><a href="./fullPage/fullpage.html"><i class="fa fa-cloud"></i>&nbsp;博客介绍</a></li>
+						<li><a href="./diary/y_info.html"><i class="glyphicon glyphicon-user"></i>&nbsp;个人中心</a></li>
+					</ul>
+				</div>
+				<div class="right pull-right yxw_log">
+					<a class="lg-layer cursor-pointer" target="_blank" onclick="window.location ='http://localhost:88/Yxw毕业设计/diary/login.php'">登录</a>
+					<div class="left rnavlin"></div>
+					<a class="lg-layer" href="./diary/404.html" onclick="confirm('注册功能暂未开放，确定要继续吗？')">注册</a>                
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<div class="header-info">
+				<div class="header-avatar"><img src="./images/logo1.png" /></div>
+				<div class="header-wrap">
+					<div class="header-user h3">我的博客</div>
+					<div class="header-opt">
+						<span class="btn btn-danger">关注我</span>
+						<span class="btn btn-info">&nbsp;分享&nbsp;</span>
+					</div>
+				</div>
+			</div>
+			<div class="header-nav">
+				<a class="curr cursor-pointer"><i class="glyphicon glyphicon-home"></i>&nbsp;我的主页</a>
+				<a href="./hot.html"><i class="glyphicon glyphicon-fire"></i>&nbsp;热点放送</a>
+				<a href="./album.html"><i class="fa fa-graduation-cap"></i>&nbsp;干货文章</a>
+				<a href="./waterfall.html"><i class="glyphicon glyphicon-picture"></i>&nbsp;图片墙</a>
+				<a href="./source.html"><i class="glyphicon glyphicon-book"></i>&nbsp;阅览室</a>
+			</div>
+		</div>
+		<div class="main">
+			<div class="row">
+				<div class="main-content">
+					<!-- 首页轮播图 -->
+					<div class="main-content-in ">
+						<!-- 其中data-ride="carousel"设置为自动播放，data-interval="2500"可以调整轮播时间间隔。 -->
+						<div id="myCarousel"  class="carousel slide" data-ride="carousel" data-interval="2600">
+							<!-- 轮播（Carousel）指标 -->
+							<ol class="carousel-indicators">
+								<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+								<li data-target="#myCarousel" data-slide-to="1"></li>
+								<li data-target="#myCarousel" data-slide-to="2"></li>
+								<li data-target="#myCarousel" data-slide-to="3"></li>
+								<li data-target="#myCarousel" data-slide-to="4"></li>
+							</ol>
+							<!-- 轮播（Carousel）项目 -->
+							<div class="carousel-inner">
+								<!-- 1.Snipaste免费屏幕截图软件 -->
+								<div class="item active cursor-pointer">
+									<a href="./details/details25.html" target="_blank"><img class="img-thumbnail" src="./images/slide_01_640x340.jpg" alt="First slide"></a>
+									<div class="carousel-caption">Snipaste免费屏幕截图软件</div>
+								</div>
+								<!-- 2.数据恢复/硬盘分区管理软件 -->
+								<div class="item cursor-pointer">
+									<a href="./details/details26.html" target="_blank"><img class="img-thumbnail"  src="./images/slide_02_640x340.jpg" alt="Second slide"></a>
+									<div class="carousel-caption"> 数据恢复/硬盘分区管理软件 </div>
+								</div>
+								<!-- 3.专业便携CCleaner增强版清理器  -->
+								<div class="item cursor-pointer">
+									<a href="./details/details27.html" target="_blank"><img class="img-thumbnail" src="./images/slide_03_640x340.jpg" alt="Third slide"></a>
+									<div class="carousel-caption">专业便携CCleaner增强版清理器</div>
+								</div>
+								<!-- 4.优化版Chrome谷歌浏览器 -->
+								<div class="item cursor-pointer">
+									<a href="./details/details28.html" target="_blank"><img class="img-thumbnail" src="./images/slide_04_640x340.jpg" alt="four slide"></a>
+									<div class="carousel-caption">优化版Chrome谷歌浏览器 </div>
+								</div>
+								<!-- 5.B站哔哩哔哩bilibili 视频下载工具   -->
+								<div class="item cursor-pointer">
+									<a ><img class="img-thumbnail" src="./images/slide_05_640x340.jpg" alt="five slide"></a>
+									<div class="carousel-caption">B站哔哩哔哩bilibili 视频下载工具 </div>
+								</div>
+							</div>
+							<!-- 轮播（Carousel）导航 -->
+							<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+					
+					<div class="main-msg form-group">
+						<div class="main-msg-send">
+							<div class="text-primary pull-left"><strong>有什么新鲜事想告诉大家吗？</strong> </div>
+							<!-- pull-left浮动靠左或者靠右 -->
+							<div class="pull-right" node-type="num"><span class="count" style="color:#808080"></span>
+							</div>
+						</div>
+						
+						<textarea class="textarea" placeholder="请输入内容" title="输入框" cols="80" rows="5"
+							style="outline: none;overflow-wrap: break-word;" onfocus="this.placeholder=''"
+							onblur="this.placeholder='请输入内容'"></textarea>
+						<div class="text-right"><button id="btn" class="btn btn-warning">发布</button></div>
+
+						
+					</div>
+					<!-- ·模拟动态发布 -->
+					<div class="WB_datail_00 form-group">
+						<div class="WB_face pull-left">
+							<img width="40" height="40" class="img-circle" src="./images/user01.jpg" alt="图片墙">
+						</div>
+						<div class="WB_info pull-left">
+							<strong class="cursor-pointer">游客</strong>
+							<br/><small><a href="#">1分钟前</a> 来自 微博 <a href="#">weibo.com</a></small>
+							<a class="pull-right cursor-pointer"><i class="fa fa-chevron-down cursor-pointer"></i></a>
+						</div>
+						<ul>
+						</ul>
+					</div>
+					<!-- 一、页面存在的动态发布 -->
+					<!-- IT之家动态 -->
+					<div class="WB_datail_01 form-group">
+						<!-- 用户头像 -->
+						<div class="WB_face pull-left">
+							<img width="40" height="40" class="img-circle" src="./images2/logo1.jpg" alt="图片墙">
+						</div>
+						<!-- 发布时间 -->
+						<div class="WB_info pull-left">
+							<strong class="cursor-pointer">IT之家</strong>
+							<br /><small><a href="#">昨天 14:50</a> 来自 微博 <a href="#">weibo.com</a></small>
+							<a class="pull-right cursor-pointer"><i class="fa fa-chevron-down cursor-pointer"></i></a>
+						</div><br/>
+						<!-- 发布内容 -->
+						<div class="WB_content_01" >
+							<p>【腾讯QQ PC版9.2.1内测版更新】昨日上午，2019年中国国际信息通信展正式开幕，三大运营商中国移动、中国联通和中国电信也宣布5G网络正式商用并正式发布5G商用套餐。今天中国电信也公布了自家的首批50个5G商用城市名单。……详情点击：</p>
+							<a class="" title="中国电信首批50个5G商用城市名单公布" target="_blank" href="http://t.cn/Ai1Fk6h6" alt="中国国际信息通信展"> <i class="fa fa-code-fork" style="margin: 0 5px;"></i>中国电信首批50个5G商用城市名单公布</a>
+							<div style="margin-top: 10px;"><img  class="cursor-pointer" src="./images/电信5G.jpg" alt="中国电信" style="width: 167px;height: 223px;"></div>
+						</div>
+						<!-- <div class="WB_handle pull-left">
+							<ul>
+								<li><i class="fa"></i><a href="#">收藏</a></li>
+								<li><i class="fa"></i><a href="#">1</a></li>
+								<li><i class="fa"></i><a href="#">1</a></li>
+							</ul>
+						</div> -->
+					</div>
+
+					<!-- 金鸡奖动态 -->
+					<div class="WB_datail_01 form-group" style="margin-top: -40px;">
+						<!-- 用户头像 -->
+						<div class="WB_face pull-left">
+							<img width="40" height="40" class="img-circle" src="./images2/logo2.jpg" alt="图片墙">
+						</div>
+						<!-- 发布时间 -->
+						<div class="WB_info pull-left">
+							<strong class="cursor-pointer">金鸡奖</strong>
+							<br /><small><a href="#" id="WB_time">今天 14:50</a> 来自 微博 <a href="#">weibo.com</a></small>
+							<a class="pull-right cursor-pointer"><i class="fa fa-chevron-down cursor-pointer"></i></a>
+						</div>
+						<!-- 发布内容 -->
+						<div class="WB_content_01" >
+							<p>第28届中国金鸡百花电影节形象大使：详情点击</p>
+							<a class="" title="#金鸡百花电影节# #金鸡奖# ​​​​ " target="_blank" href="http://t.cn/Ai1Fk6h6" alt="#金鸡百花电影节# #金鸡奖# ​​​​ "> <i class="fa fa-code-fork" style="margin: 0 5px;"></i>#金鸡百花电影节# #金鸡奖# ​​​​ </a>
+							<div style="margin-top: 10px;"><img  class="cursor-pointer" src="./images/home02.jpg" alt="中国金鸡百花电影节形象大使" style="width: 167px;height: 223px;"></div>
+						</div>
+					</div>
+
+					<!-- IT之家动态 -->
+					<div class="WB_datail_01 form-group" style="margin-top: -40px;">
+						<div class="WB_face pull-left">
+							<img width="40" height="40" class="img-circle" src="./images2/logo1.jpg" alt="图片墙">
+						</div>
+						<div class="WB_info pull-left">
+							<strong class="cursor-pointer">IT之家</strong>
+							<br /><small><a href="#">今天 14:50</a> 来自 微博 <a href="#">weibo.com</a></small>
+							<a class="pull-right cursor-pointer"><i class="fa fa-chevron-down cursor-pointer"></i></a>
+						</div>
+						<div class="WB_content_01" >
+							<p>【腾讯QQ PC版9.2.1内测版更新：一键拖动建群，多条语音消息自动播放】日前，腾讯QQ PC版内测版本迎来V9.2.1更新，新增会话列表一键拖动建群，另外支持多条语音消息自动播放，收听更方便。……详情点击：</p>
+							<a class="" title="腾讯QQ PC版9.2.1内测版更新" target="_blank" href="https://www.ithome.com/0/456/919.htm" alt="腾讯QQ PC版9.2.1内测版更新"> <i class="fa fa-code-fork" style="margin: 0 5px;"></i>腾讯QQ PC版9.2.1内测版更新：一键拖动建群，...</a>
+							<div style="margin-top: 10px;"><img class="cursor-pointer" src="./images/home03.jpg" alt="中国电信" style="width: 167px;height: 223px;"></div>
+						</div>
+					</div>
+					<!--  -->
+					<div class="WB_datail_01 form-group" style="margin-top: -40px;">
+						<!-- 用户头像 -->
+						<div class="WB_face pull-left">
+							<img width="40" height="40" class="img-circle" src="./images2/logo3.jpg" alt="图片墙">
+						</div>
+						<!-- 发布时间 -->
+						<div class="WB_info pull-left">
+							<strong class="cursor-pointer">极客村民</strong>
+							<br /><small><a href="#">今天 14:50</a> 来自  <a href="#">小米6</a></small>
+							<a class="pull-right cursor-pointer"><i class="fa fa-chevron-down cursor-pointer"></i></a>
+						</div>
+						<!-- 发布内容 -->
+						<div class="WB_content_01" >
+							<p>小米手表实拍，大家觉得怎么样？</p>
+							<a class="" title="小米手表实拍" target="_blank" href="#" alt="小米手表实拍"> <i class="fa fa-code-fork" style="margin: 0 5px;"></i>小米手表实拍</a>
+							<div style="margin-top: 10px;"><img class="cursor-pointer" src="./images/home04.jpg" alt="小米手表实拍" style="width: 167px;height: 223px;"></div>
+						</div>
+					</div>
+				</div>
+				<div class="main-side ">
+					<!-- 粉丝关注数 -->
+					<div class="main-side-top form-group">
+						<ul class="text-center">
+							<li class="not1">
+								<a href="#" class="font-bold">521</a><br /><small><i class="fa fa-heart "></i>关注</small>
+							</li>
+							<li>
+								<a href="#" class="font-bold">1989</a><br /><small><i class="fa fa-address-book"></i>粉丝</small>
+							</li>
+							<li><a href="#" class="font-bold">12</a><br /><small><i class="fa fa-envelope-open"></i>博客</small>
+							</li>
+						</ul>
+					</div>
+					<!-- JS日历效果 -->
+					<div class="body">
+						<table cellpadding="0" cellspacing="0" id="1" class="table">
+							<tr>
+								<td style="padding: 0px;">
+									<div id="cal">
+										<div id="top">
+											公元
+											<select>
+											</select>
+											年
+											<select>
+											</select>
+											月 农历
+											<span>
+											</span>
+											年 [
+											<span>
+											</span>
+											年 ]
+											<input type="button" value="回到今天" title="点击后跳转回今天" style="padding:0px">
+										</div>
+										<ul id="wk">
+											<li>
+												一
+											</li>
+											<li>
+												二
+											</li>
+											<li>
+												三
+											</li>
+											<li>
+												四
+											</li>
+											<li>
+												五
+											</li>
+											<li>
+												<b>
+													六
+												</b>
+											</li>
+											<li>
+												<b>
+													日
+												</b>
+											</li>
+										</ul>
+										<div id="cm">
+										</div>
+										<div id="bm">
+										</div>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<!-- 底部区域 -->
+	<footer>
+		<!-- 点击关注我成功的按钮 -->
+			<div class="notice-box btn-flow01" style="bottom: 0px;display: none;" aria-hidden="true">
+				<div>
+					<i class="fa fa-check-square notice-icon type-success"></i>
+					<span class="notice">关注成功</span>
+				</div>
+			</div>
+			<div class="notice-box btn-flow02" style="bottom: 0px;display: none;" aria-hidden="true">
+				<div>
+					<i class="fa fa-check-square notice-icon type-success"></i>
+					<span class="notice">分享成功</span>
+				</div>
+			</div>
+			<div class="branding branding-black">
+				<div class="container">
+					<h2>互动交流</h2>
+					<!-- #7cbe63 -->
+					<a target="blank" class="btn btn-lg scan-wx" href="#">微信二维码</a>
+					<a target="blank" class="btn btn-lg scan-qq" href="#">QQ二维码</a>
+					<div class="scan"> 
+						<img class="img-thumbnail img-wx"  src="./images3/wechat-120x120.jpg" alt="scan扫描">
+						<!-- <div style="width: 12px;display: inline-block;"></div> -->
+						<img class="img-thumbnail img-qq"  src="./images3/qq-120x120.jpg" alt="scan扫描">
+					</div>
+				</div>
+				<div class="copy">
+					<strong class="h3" style="margin-top: 10px";>友情链接</strong>
+					<ul class="list-unstyled list-inline form-group" style="margin-top: 15px;">
+						<li><a href="https://www.baidu.com/" target="_blanck" title="百度导航，做一个强大的导航" >百度导航</a></li>
+						<li><a href="https://www.coolapk.com/" target="_blanck" title="如果你是发烧机友你就来" >酷安网</a></li>
+						<li><a href="https://www.52pojie.cn/" target="_blanck" title="我爱破解网" >吾爱破解网</a>
+						</li>
+						<li><a href="https://www.52dfg.com/" target="_blanck" title="专注于PC端破解软件研发" >巅峰阁社区</a></li>
+						<li><a href="http://www.52zxw.com/" target="_blanck" title="我要自学网，您身边的教育专家" >我要自学网</a>
+						</li>
+						<li><a href="https://music.ghpym.com/" target="_blanck" title="全网无损音乐免费下载哦~" >果核音乐搜搜</a></li>
+						<li><a href="https://mail.163.com/" target="_blanck" title="163邮箱登录" >163邮箱</a></li>
+						<li><a href="https://www.snipaste.com/" target="_blanck" title="最强大的轻量级截图贴图工具" >snipaste截图工具</a></li>
+						<!-- <li><a href="#" target="#" title="谷歌浏览器插件解析" >Chrome插件解析</a></li> -->
+					</ul>
+					<p style="color: #999;">&copy;2017-2019  
+						<a href="#">linkedin_yan@foxmail.com</a>
+						<a href="#">版权所有</a>
+					</p>
+					<p>站长统计</p>
+				</div>
+			</div>
+			
+	</footer>
+		<!-- 返回顶部区域 -->
+		<div class="toolbar">
+		<a href="###" class="toolbar-item toolbar-item-weixin">
+		<span class="toolbar-layer"></span>
+		</a>
+		<a href="###" class="toolbar-item toolbar-item-feedback"></a>
+			<span class="toolbar-layer"></span>
+		</a>
+		<a href="javascript:scroll(0,0)" id="top" class="toolbar-item toolbar-item-top"></a>
+		</div>
+	<!-- <div class="layer">
+		<div class="layer-mask"></div>
+		<div class="layer-wrap">
+			<div class="layer-box">
+				<div class="layer-title">欢迎登录</div>
+				<div class="layer-close">×</div>
+				<table class="login">
+					<tr>
+						<th>用户名：</th>
+						<td><input type="text" /></td>
+					</tr>
+					<tr>
+						<th>密码：</th>
+						<td><input type="password" /></td>
+					</tr>
+					<tr>
+						<th></th>
+						<td><button class="button">登录</button></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div> -->
+	<!-- <script>
+
+		function layer() {
+			var speed = 200; //淡入淡出动画速度
+			var $layer = $(".layer");
+			var $wrap = $layer.find(".layer-wrap");
+			var $close = $layer.find(".layer-close");
+
+			//以淡入效果显示弹出层
+			$layer.fadeIn(speed);
+
+			//控制弹出层显示的位置为网页中心
+			$wrap.css("margin-left", "-" + ($wrap.width() / 2) + "px");
+			$wrap.css("margin-top", "-" + ($wrap.height() / 2) + "px");
+
+			//关闭按钮，以淡出效果隐藏弹出层
+			$close.click(function () {
+				$layer.fadeOut(speed);
+			});
+		}
+
+		//点击按钮时显示弹出层
+		$("#layer").click(layer);
+
+	</script> -->
+
+	<!-- 一般网页先加载完页面再加载JS文件,这样方便 -->
+	<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+	<script src="./js/jquery-3.3.1.js"></script>
+
+	<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+	<script src="./js/bootstrap.js"></script>
+	
+	<!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
+	<!-- 引入js日历代码 -->
+	<script src="./js/calendar.js"></script>
+	<!-- 最后载入自己的JS代码 -->
+	<script src="./js/index.js"></script>
+</body>
+
+</html>
